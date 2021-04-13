@@ -1,4 +1,6 @@
-/*! tailwindcss v2.1.1 | MIT License | https://tailwindcss.com */
+/* REQUIRED */
+
+/* ! tailwindcss v2.1.1 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
@@ -33371,6 +33373,26 @@ select {
 
 .backdrop-sepia {
   --tw-backdrop-sepia: sepia(100%);
+}
+
+/* 
+*
+*   CREATEB BY: Luso Design,
+*   AUTHORS: Gijs Huitenga, Matthijs Berghuis,
+*   DATE CREATED: 12-04-2021
+*
+*/
+
+/* 1. Navbar styling */
+
+.ld-transparent {
+  background-color: transparent;
+  transition: .25s ease-in;
+}
+
+.ld-white {
+  background-color: white;
+  transition: .25s ease-in;
 }
 
 @media (min-width: 640px) {

@@ -3798,9 +3798,30 @@ module.exports = {
   \*****************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
+/* REQUIRED */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
+/* 
+*
+*   CREATEB BY: Luso Design,
+*   AUTHORS: Gijs Huitenga, Matthijs Berghuis,
+*   DATE CREATED: 12-04-2021
+*
+*/
+
+
+$(window).on("scroll", function () {
+  if ($(window).scrollTop() == 0) {
+    $(".ld-navbar").removeClass("ld-white");
+    $(".ld-navbar").removeClass("shadow");
+    $(".ld-navbar").addClass("ld-transparent");
+  } else if ($(window).scrollTop() > 0) {
+    $(".ld-navbar").removeClass("ld-transparent");
+    $(".ld-navbar").addClass("ld-white");
+    $(".ld-navbar").addClass("shadow");
+  }
+});
 
 /***/ }),
 

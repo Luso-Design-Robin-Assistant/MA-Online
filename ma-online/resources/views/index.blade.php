@@ -11,7 +11,7 @@
     </head>
     <body>
         
-        <div class="fixed bg-white shadow w-full">
+        <div class="ld-navbar fixed ld-transparent w-full">
             <div class="container mx-auto p-5">
                 <nav class="flex">
                     <div class="flex-none flex justify-center w-60 h-16">
@@ -29,9 +29,15 @@
             </div>
         </div>
 
-        <div class="container mx-auto bg-purple-300" style="padding-top: 104px; height: 5000px;">
+        <div class="w-full bg-gray-400" style="padding-top: 104px; height: 100vh;"> 
+
+        </div>
+
+        <div class="container mx-auto bg-gray-500" style="height: 5000px;">
             
         </div>
 
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </html>
