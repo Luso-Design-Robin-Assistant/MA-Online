@@ -17,13 +17,13 @@
                     <div class="flex-none flex justify-center w-60 h-16">
                         <a class="self-center text-3xl" href="#">Logo</a>
                     </div>
-                    <ul class="flex-1 flex self-center flex-row pl-10">
+                    <ul class="flex-1 flex self-center flex-row ml-10">
                         <li><a class="pr-10" href="#">Voorbeeld</a></li>
                         <li><a class="pr-10" href="#">Voorbeeld</a></li>
                         <li><a class="pr-10" href="#">Voorbeeld</a></li>
                     </ul>
                     <div class="flex-none flex">
-                        <a class="self-center text-lg" href="#">Inloggen</a>
+                        <a class="self-center bg-green-400 hover:bg-green-300 transition-colors rounded text-lg text-white py-2 px-4" href="{{ route('login') }}">Inloggen</a>
                     </div>
                 </nav>
             </div>
