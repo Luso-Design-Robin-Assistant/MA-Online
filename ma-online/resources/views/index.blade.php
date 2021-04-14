@@ -2,15 +2,15 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
 
-        <meta charset="utf-8">  
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
         <title>MA Online</title>
-        
+
     </head>
     <body>
-        
+
         <div class="ld-navbar fixed ld-transparent w-full">
             <div class="container mx-auto p-5">
                 <nav class="flex">
@@ -29,11 +29,28 @@
             </div>
         </div>
 
-        <div class="w-full bg-gray-400" style="padding-top: 104px; height: 100vh;"> 
+        <div class="w-full bg-gray-400" style="padding-top: 104px; height: 100vh;">
 
         </div>
 
         <div class="container mx-auto bg-gray-500" style="height: 5000px;">
+            <div class="flex flex-row justify-between content-center bg-white py-40">
+                <div class="ld-content flex flex-col pr-20">
+                    <span class="text-5xl uppercase font-semibold pb-20">Voorbeeldtitel</span>
+                    <span class="text-4xl font-light mb-8">Voorbeeldtitel</span>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
+                </div>
+                <img src="{{url('/images/semi-img.png')}}"  alt="semi">
+            </div>
+            <div class="flex flex-row justify-between content-center bg-white py-40">
+                <img src="{{url('/images/semi-img.png')}}"  alt="semi">
+                <div class="ld-content flex flex-col mt-20 pl-20">
+                    <span class="text-4xl font-light mb-8">Voorbeeldtitel</span>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
+                </div>
+            </div>
             
         </div>
 
