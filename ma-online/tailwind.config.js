@@ -9,10 +9,28 @@ module.exports = {
     ],
 
     theme: {
+        screens: {
+            sm: '480px',
+            md: '768px',
+            lg: '976px',
+            xl: '1440px',
+        },
+        colors: {
+            black: '#000',
+            white: '#FFF',
+            gray: {
+                100: '#E5E5E5',
+                200: '#CCC',
+            },
+        },
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Roboto', ...defaultTheme.fontFamily.sans],
             },
+            backgroundImage: theme => ({
+                'hero-image': 'url("/images/hero-image.png")',
+                'section-image': 'url("/images/section-image.png")',
+            }),
         },
     },
 
