@@ -3270,7 +3270,7 @@ select {
 }
 
 .bg-hero-image {
-  background-image: url("/images/hero-image.png");
+    background: linear-gradient(to bottom, rgba(41, 41, 41, .50), rgba(41, 41, 41, .50)),  url('/images/hero-image.png');
 }
 
 .bg-section-image {
@@ -19297,7 +19297,7 @@ select {
   --tw-backdrop-sepia: sepia(100%);
 }
 
-/* 
+/*
 *
 *   CREATEB BY: Luso Design,
 *   AUTHORS: Gijs Huitenga, Matthijs Berghuis,
