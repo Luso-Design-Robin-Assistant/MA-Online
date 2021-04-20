@@ -22,7 +22,12 @@ module.exports = {
             gray: {
                 100: '#E5E5E5',
                 200: '#CCC',
+                300: '#545454',
+                400: '#4F4F4F',
+                800: '#211F20',
             },
+            pink: '#EC148C',
+            green: '#6AC39B',
         },
         extend: {
             fontFamily: {
@@ -32,6 +37,17 @@ module.exports = {
                 'hero-image': 'url("/images/hero-image.png")',
                 'section-image': 'url("/images/section-image.png")',
             }),
+        },
+        borderWidth: {
+            DEFAULT: '1px',
+            '0': '0',
+            '2': '2px',
+            '3': '3px',
+            '4': '4px',
+            '6': '6px',
+            '8': '8px',
+            '10': '10px',
+            '12': '12px',
         },
     },
 
