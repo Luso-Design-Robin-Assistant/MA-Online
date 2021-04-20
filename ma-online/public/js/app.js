@@ -3809,6 +3809,7 @@ __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
 *   DATE CREATED: 12-04-2021
 *
 */
+// 1. Header on scroll styling event
 
 
 $(window).on("scroll", function () {
@@ -3825,6 +3826,25 @@ $(window).on("scroll", function () {
     $(".ld-navbar").addClass("text-black");
     $(".ld-navbar").addClass("shadow");
   }
+}); // 2. Anchor link smooth scroll event
+
+$('.ld-main-nav li a').on('click', function (e) {
+  var el = $(e.target.getAttribute('href'));
+  var elOffset = el.offset().top;
+  var elHeight = el.height();
+  var windowHeight = $(window).height();
+  var offset;
+
+  if (elHeight < windowHeight) {
+    offset = elOffset - (windowHeight / 2 - elHeight / 2);
+  } else {
+    offset = elOffset;
+  }
+
+  var speed = 700;
+  $('html, body').animate({
+    scrollTop: offset
+  }, speed);
 });
 
 /***/ }),
