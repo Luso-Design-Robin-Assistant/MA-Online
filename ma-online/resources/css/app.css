@@ -40,10 +40,6 @@
 }
 
 /* 3. Hamburger menu */
-.p-menu1{
-    height: 100%;
-}
-
 .ld-hamburger1 {
     height: 45px;
     display: grid;
@@ -55,7 +51,6 @@
 .ld-hamburger1 div {
     width: 40px;
     height: 5px;
-    margin-top: 7px;
     transition: all 0.2s ease-in-out;
 }
 
@@ -81,45 +76,17 @@
 }
 
 #toggle1:checked ~ .ld-menu1 {
-    height: 340px;
+    height: auto;
+}
+
+#toggle1:not(:checked) ~ .ld-menu1 {
+    padding: 0 !important;
 }
 
 .ld-menu1 {
-    width: 25%;
-    display: grid;
-    grid-template-rows: 1fr repeat(4, 0.5fr);
-    grid-row-gap: 25px;
-    padding: 0;
     list-style: none;
     clear: both;
-    width: auto;
-    text-align: center;
     height: 0px;
-    overflow: hidden;
     transition: height .4s ease;
-    z-index: 120;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-.ld-menu1 a:first-child {
-    margin-top: 40px;
-}
-
-.ld-menu1 a:last-child {
-    margin-bottom: 40px;
-}
-
-.ld-link1 {
-    width: 25%;
-    margin: 0;
-    padding: 10px 0;
-    font: 700 20px 'Oswald', sans-serif;
-}
-
-.ld-link1:hover {
-    background-color: #fff;
-    color: rgb(61, 61, 61);
-    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }

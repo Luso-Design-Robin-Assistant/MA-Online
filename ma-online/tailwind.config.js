@@ -42,6 +42,13 @@ module.exports = {
                 '90': '90%',
                 '110': '110%',
             },
+            margin: {
+                ham: '7px',
+                sm: '8px',
+                md: '16px',
+                lg: '24px',
+                xl: '48px',
+            },
         },
         borderWidth: {
             DEFAULT: '1px',

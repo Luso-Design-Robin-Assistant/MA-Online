@@ -23,35 +23,36 @@
     <body>
 
         <!-- Navbar -->
-        <div class="ld-navbar fixed ld-transparent text-white w-full z-50">
+        <div class="ld-navbar fixed ld-transparent w-full z-50">
             <div class="container mx-auto p-8">
                 <nav class="flex uppercase">
-                    <div class="flex align-middle justify-center h-12">
+                    <div class="ld-logo flex align-middle justify-center h-12">
                         <a class="self-center text-3xl" href="#top">
                             <img class="ls-logo w-20" src="{{ url('/images/logo.png') }}" alt="logo-placeholder">
                         </a>
                     </div>
-                    <ul class="ld-main-nav flex-1 hidden lg:flex self-center flex-row ml-10 text-md md:text-lg lg:text-xl">
+                    <ul class="ld-main-nav flex-1 hidden lg:flex self-center flex-row text-white ml-10 text-md md:text-lg lg:text-xl">
                         <li><a class="mr-10 whitespace-nowrap" href="#mediacollege">Mediacollege</a></li>
                         <li><a class="mr-10 whitespace-nowrap" href="#ma-online">Ma online</a></li>
                         <li><a class="mr-10 whitespace-nowrap" href="#geen-account">Geen acount?</a></li>
                         <li><a class="mr-10 whitespace-nowrap" href="#proeflessen">Proeflessen</a></li>
                     </ul>
-                    <div class="flex justify-self-end">
-                        <a class="text-xl text-color self-center py-2 px-4" href="{{ route('login') }}">Inloggen</a>
+                    <div class="ld-login flex text-white ml-auto lg:ml-0">
+                        <a class="text-xl self-center py-2 px-4" href="{{ route('login') }}">Inloggen</a>
                     </div>
-                    <div class="flex lg:hidden relative self-end">
+                    <div class="flex lg:hidden">
                         <input id="toggle1" class="hidden" type="checkbox" />
                         <label class="ld-hamburger1" for="toggle1">
-                            <div class="ld-top bg-white relative"></div>
-                            <div class="ld-meat bg-white relative"></div>
-                            <div class="ld-bottom bg-white relative"></div>
+                            <div class="ld-top bg-white relative mt-ham"></div>
+                            <div class="ld-meat bg-white relative mt-ham"></div>
+                            <div class="ld-bottom bg-white relative mt-ham"></div>
                         </label>
-                        <nav class="ld-menu1 w-52 absolute top-10">
-                            <a class="ld-link1" href="#mediacollege">Mediacollege</a>
-                            <a class="ld-link1" href="#ma-online">Ma online</a>
-                            <a class="ld-link1" href="#geen-account">Geen account?</a>
-                            <a class="ld-link1" href="#proeflessen">Proeflessen</a>
+                        <nav class="ld-menu1 w-auto flex flex-col text-white text-2xl text-center absolute top-28 right-0 z-50 overflow-hidden py-24 px-20">
+                            <div class="w-full h-full bg-white bg-opacity-10 backdrop-filter backdrop-blur-2xl absolute top-0 left-0 z-0"></div>
+                            <a class="ld-link1 py-8 z-10" href="#mediacollege">Mediacollege</a>
+                            <a class="ld-link1 py-8 z-10" href="#ma-online">Ma online</a>
+                            <a class="ld-link1 py-8 z-10" href="#geen-account">Geen account?</a>
+                            <a class="ld-link1 py-8 z-10" href="#proeflessen">Proeflessen</a>
                         </nav>
                     </div>
                 </nav>
@@ -59,8 +60,8 @@
         </div>
 
         <!-- Hero image -->
-        <div class="w-full h-screen bg-hero-image bg-no-repeat bg-center bg-cover">
-            <div id="top" class="w-full h-full opacity-50 bg-gradient-to-b from-black via-gray-300 to-gray-400"></div>
+        <div id="top" class="w-full h-screen bg-hero-image bg-no-repeat bg-center bg-cover">
+            <div class="w-full h-full opacity-50 bg-gradient-to-b from-black via-gray-300 to-gray-400"></div>
         </div>
 
         <!-- Content -->
@@ -148,7 +149,7 @@
         <!-- Footer -->
         <div class="w-full bg-gray-800">
             <div class="container mx-auto" >
-                <footer class="flex w-full flex-col md:flex-row py-8 uppercase text-white">
+                <footer class="ld-footer flex w-full flex-col md:flex-row py-8 uppercase text-white">
                     <div class="flex flex-1 place-content-center items-center" >
                         <a class="text-xl p-4" href="#mediacollege">Mediacollege</a>
                     </div>
