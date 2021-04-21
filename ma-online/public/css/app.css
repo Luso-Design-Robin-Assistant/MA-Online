@@ -20527,11 +20527,6 @@ select {
 
 /* 3. Hamburger menu */
 
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
 .p-menu1{
   height: 100%;
 }

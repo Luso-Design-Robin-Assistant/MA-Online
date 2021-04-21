@@ -112,31 +112,31 @@
                     <div class="gallery js-flickity" data-flickity-options='{ "freeScroll": false, "wrapAround": true }'>
                         <div class="gallery-cell w-3/5 md:w-2/5 lg:w-1/5 bg-white p-14 mr-40">
                             <a class="flex flex-col place-items-center" href="#">
-                                <span class="text-xl md:text-2xl text-center pb-14">PHOTOSHOP</span>
+                                <span class="text-xl text-black md:text-2xl text-center pb-14">PHOTOSHOP</span>
                                 <img src="{{ url('/images/Icon_photoshop.png') }}" alt="Photoshop icon">
                             </a>
                         </div>
                         <div class="gallery-cell w-3/5 md:w-2/5 lg:w-1/5 bg-white p-14 mr-40">
                             <a class="flex flex-col place-items-center" href="#">
-                                <span class="text-xl md:text-2xl text-center pb-14">ILLUSTRATOR</span>
+                                <span class="text-xl text-black md:text-2xl text-center pb-14">ILLUSTRATOR</span>
                                 <img src="{{ url('/images/Icon_illustrator.png') }}" alt="Illustrator icon">
                             </a>
                         </div>
                         <div class="gallery-cell w-3/5 md:w-2/5 lg:w-1/5 bg-white p-14 mr-40">
                             <a class="flex flex-col place-items-center" href="#">
-                                <span class="text-xl md:text-2xl text-center pb-14">AFTER EFFECTS</span>
+                                <span class="text-xl text-black md:text-2xl text-center pb-14">AFTER EFFECTS</span>
                                 <img src="{{ url('/images/Icon_after_effects.png') }}" alt="After effects icon">
                             </a>
                         </div>
                         <div class="gallery-cell w-3/5 md:w-2/5 lg:w-1/5 bg-white p-14 mr-40">
                             <a class="flex flex-col place-items-center" href="#">
-                                <span class="text-xl md:text-2xl text-center pb-14">XD</span>
+                                <span class="text-xl text-black md:text-2xl text-center pb-14">XD</span>
                                 <img src="{{ url('/images/Icon_XD.png') }}" alt="XD icon">
                             </a>
                         </div>
                         <div class="gallery-cell w-3/5 md:w-2/5 lg:w-1/5 bg-white p-14 mr-40">
                             <a class="flex flex-col place-items-center" href="#">
-                                <span class="text-xl md:text-2xl text-center pb-14">...</span>
+                                <span class="text-xl text-black md:text-2xl text-center pb-14">...</span>
                                 <img src="{{ url('/images/Icon_photoshop.png') }}" alt="... icon">
                             </a>
                         </div>
