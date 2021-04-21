@@ -31,14 +31,28 @@
                             <img class="ls-logo w-20" src="{{ url('/images/logo.png') }}" alt="logo-placeholder">
                         </a>
                     </div>
-                    <ul class="ld-main-nav flex-1 flex self-center flex-row ml-10 text-xl">
-                        <li><a class="pr-10" href="#mediacollege">Mediacollege</a></li>
-                        <li><a class="pr-10" href="#ma-online">Ma online</a></li>
-                        <li><a class="pr-10" href="#geen-account">Geen acount?</a></li>
-                        <li><a class="pr-10" href="#proeflessen">Proeflessen</a></li>
+                    <ul class="ld-main-nav flex-1 hidden lg:flex self-center flex-row ml-10 text-md md:text-lg lg:text-xl">
+                        <li><a class="mr-10 whitespace-nowrap" href="#mediacollege">Mediacollege</a></li>
+                        <li><a class="mr-10 whitespace-nowrap" href="#ma-online">Ma online</a></li>
+                        <li><a class="mr-10 whitespace-nowrap" href="#geen-account">Geen acount?</a></li>
+                        <li><a class="mr-10 whitespace-nowrap" href="#proeflessen">Proeflessen</a></li>
                     </ul>
-                    <div class="flex">
+                    <div class="flex justify-self-end">
                         <a class="text-xl text-color self-center py-2 px-4" href="{{ route('login') }}">Inloggen</a>
+                    </div>
+                    <div class="flex lg:hidden relative self-end">
+                        <input id="toggle1" class="hidden" type="checkbox" />
+                        <label class="ld-hamburger1" for="toggle1">
+                            <div class="ld-top bg-white relative"></div>
+                            <div class="ld-meat bg-white relative"></div>
+                            <div class="ld-bottom bg-white relative"></div>
+                        </label>
+                        <nav class="ld-menu1 w-52 absolute top-10">
+                            <a class="ld-link1" href="#mediacollege">Mediacollege</a>
+                            <a class="ld-link1" href="#ma-online">Ma online</a>
+                            <a class="ld-link1" href="#geen-account">Geen account?</a>
+                            <a class="ld-link1" href="#proeflessen">Proeflessen</a>
+                        </nav>
                     </div>
                 </nav>
             </div>
@@ -52,27 +66,27 @@
         <!-- Content -->
         <div class="w-full bg-gray-800">
             <div class="w-full">
-                <div class="container mx-auto flex flex-col md:flex-row justify-between content-center py-32">
-                    <div class="ld-content flex flex-col w-full place-content-center relative md:w-2/4">
-                        <span class="text-4xl sm:text-5xl uppercase text-pink font-bold absolute -top-10 pb-20 px-4 md:px-0">Informatie</span>
-                        <div class="bg-white p-14 z-10 overflow-visible" style="width: 110%;">
+                <div class="container mx-auto flex flex-col-reverse md:flex-row justify-between content-center relative pt-32 pb-20 md:py-32">
+                    <span class="text-4xl sm:text-5xl uppercase text-pink font-bold pl-6 sm:pl-4 md:pl-0 absolute top-10 xl:top-20">Informatie</span>
+                    <div class="ld-content flex flex-col w-full place-content-center relative md:static md:w-2/4 px-6 sm:px-4 md:px-0">
+                        <div class="w-90 md:w-110 mx-auto md:mx-auto bg-white relative -top-10 md:-top-0 md:static p-6 sm:p-14 z-10 overflow-visible">
                             <span id="mediacollege" class="text-3xl sm:text-4xl font-bold px-4 md:px-0">Mediacollege</span>
                             <p class="mb-8 md:mb-0 px-4 md:px-0" >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
                         </div>
                     </div>
                     <div class="w-full md:w-2/4 flex">
-                        <img class="place-self-center self-center flex-shrink-0" src="{{ url('/images/About_IMG_Mediacollege.jpg') }}"  alt="semi">
+                        <img class="place-self-center self-center flex-shrink-0 px-6 sm:px-4 md:px-0" src="{{ url('/images/About_IMG_Mediacollege.jpg') }}"  alt="semi">
                     </div>
                 </div>
             </div>
             <div id="ma-online" class="w-full">
-                <div class="container mx-auto flex flex-col md:flex-row justify-between content-center py-32">
+                <div class="container mx-auto flex flex-col md:flex-row justify-between content-center py-20 md:py-32">
                     <div class="w-full md:w-2/4 flex">
-                        <img class="place-self-center self-center flex-shrink-0" src="{{ url('/images/About_IMG_MA_online.jpg') }}"  alt="semi">
+                        <img class="place-self-center self-center flex-shrink-0 px-6 sm:px-4 md:px-0" src="{{ url('/images/About_IMG_MA_online.jpg') }}"  alt="semi">
                     </div>
-                    <div class="ld-content flex flex-col w-full place-content-center md:w-2/4" style="direction: rtl;">
-                        <div class="bg-white p-14 border-green border-solid border-10 overflow-visible float-right" style="width: 110%; direction: ltr;">
+                    <div class="ld-content flex flex-col w-full place-content-center relative md:static md:w-2/4 px-6 sm:px-4 md:px-0" style="direction: rtl;">
+                        <div class="w-90 md:w-110 mx-auto md:mx-auto bg-white relative -top-10 md:-top-0 md:static p-6 sm:p-14 border-green border-solid border-10 overflow-visible float-right" style="direction: ltr;">
                             <span class="text-3xl sm:text-4xl font-bold mb-8 px-4 md:px-0">MA Online</span>
                             <p class="px-4 md:px-0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
@@ -89,40 +103,40 @@
                 </div>
             </div>
             <div id="proeflessen" class="w-full">
-                <div class="container mx-auto flex flex-col pt-32 pb-20">
-                    <span class="text-4xl sm:text-5xl font-bold text-pink pb-12 px-4 md:px-0">PROEFLESSEN</span>
-                    <p class="w-full bg-white p-14 border-yellow border-solid border-10">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                <div class="container mx-auto flex flex-col pt-32 pb-20 px-6 sm:px-4 md:px-0">
+                    <span class="text-4xl sm:text-5xl font-bold text-pink pb-12">PROEFLESSEN</span>
+                    <p class="w-full bg-white p-6 sm:p-14 border-yellow border-solid border-10">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
                 </div>
                 <div class="w-full container mx-auto pb-32">
                     <div class="gallery js-flickity" data-flickity-options='{ "freeScroll": false, "wrapAround": true }'>
-                        <div class="gallery-cell w-1/5 bg-white p-14 mr-40">
+                        <div class="gallery-cell w-3/5 md:w-2/5 lg:w-1/5 bg-white p-14 mr-40">
                             <a class="flex flex-col place-items-center" href="#">
-                                <span class="text-2xl pb-14">PHOTOSHOP</span>
+                                <span class="text-xl md:text-2xl text-center pb-14">PHOTOSHOP</span>
                                 <img src="{{ url('/images/Icon_photoshop.png') }}" alt="Photoshop icon">
                             </a>
                         </div>
-                        <div class="gallery-cell w-1/5 bg-white p-14 mr-40">
+                        <div class="gallery-cell w-3/5 md:w-2/5 lg:w-1/5 bg-white p-14 mr-40">
                             <a class="flex flex-col place-items-center" href="#">
-                                <span class="text-2xl pb-14">ILLUSTRATOR</span>
+                                <span class="text-xl md:text-2xl text-center pb-14">ILLUSTRATOR</span>
                                 <img src="{{ url('/images/Icon_illustrator.png') }}" alt="Illustrator icon">
                             </a>
                         </div>
-                        <div class="gallery-cell w-1/5 bg-white p-14 mr-40">
+                        <div class="gallery-cell w-3/5 md:w-2/5 lg:w-1/5 bg-white p-14 mr-40">
                             <a class="flex flex-col place-items-center" href="#">
-                                <span class="text-2xl pb-14">AFTER EFFECTS</span>
+                                <span class="text-xl md:text-2xl text-center pb-14">AFTER EFFECTS</span>
                                 <img src="{{ url('/images/Icon_after_effects.png') }}" alt="After effects icon">
                             </a>
                         </div>
-                        <div class="gallery-cell w-1/5 bg-white p-14 mr-40">
+                        <div class="gallery-cell w-3/5 md:w-2/5 lg:w-1/5 bg-white p-14 mr-40">
                             <a class="flex flex-col place-items-center" href="#">
-                                <span class="text-2xl pb-14">XD</span>
+                                <span class="text-xl md:text-2xl text-center pb-14">XD</span>
                                 <img src="{{ url('/images/Icon_XD.png') }}" alt="XD icon">
                             </a>
                         </div>
-                        <div class="gallery-cell w-1/5 bg-white p-14 mr-40">
+                        <div class="gallery-cell w-3/5 md:w-2/5 lg:w-1/5 bg-white p-14 mr-40">
                             <a class="flex flex-col place-items-center" href="#">
-                                <span class="text-2xl pb-14">...</span>
+                                <span class="text-xl md:text-2xl text-center pb-14">...</span>
                                 <img src="{{ url('/images/Icon_photoshop.png') }}" alt="... icon">
                             </a>
                         </div>

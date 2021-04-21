@@ -38,6 +38,10 @@ module.exports = {
                 'hero-image': 'url("/images/hero-image.png")',
                 'section-image': 'url("/images/section-image.png")',
             }),
+            width: {
+                '90': '90%',
+                '110': '110%',
+            },
         },
         borderWidth: {
             DEFAULT: '1px',
