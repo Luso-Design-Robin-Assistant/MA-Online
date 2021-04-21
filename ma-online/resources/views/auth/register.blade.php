@@ -8,27 +8,23 @@
 
         <form method="POST" action="{{ route('register') }}">
             @csrf
+            <div class="ls-forms w-full	 h-full items-center ">
+                <span class="text-3xl md:text-5xl uppercase font-semibold" style="color: #EC008C">Aanmelden</span>
+                <div>
+                    <x-jet-input id="name" placeholder="Naam achternaam:" style="background:transparent; color: white; border:none; border-bottom: 2px solid white; " class="mt-8 md:mt-16 block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                </div>
 
-            <div>
-                <x-jet-label for="name" value="{{ __('Name') }}" />
-                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            </div>
+                <div class="mt-4">
+                    <x-jet-input id="email" placeholder="Email:" style="background:transparent; color: white; border:none; border-bottom: 2px solid white; " class="mt-12 block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+                </div>
 
-            <div class="mt-4">
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
+                <div class="mt-4">
+                    <x-jet-input id="password" placeholder="Wachtwoord:" style="background:transparent; color: white; border:none; border-bottom: 2px solid white; " class="mt-12 block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
+                </div>
 
-            <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-            </div>
-
-            <div class="mt-4">
-                <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
-            </div>
-
+                <div class="mt-4">
+                    <x-jet-input id="password_confirmation" placeholder="Wachtwoord herhalen:" style="background:transparent; color: white; border:none; border-bottom: 2px solid white; " class="mt-12 block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+                </div>
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">
                     <x-jet-label for="terms">
@@ -45,15 +41,14 @@
                     </x-jet-label>
                 </div>
             @endif
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-jet-button class="ml-4">
-                    {{ __('Register') }}
+                <x-jet-button class="mt-16 text-center">
+                    {{ __('Aanmelden') }}
                 </x-jet-button>
+            <div class="flex flex-col mt-4" >
+                <div class="block text-2xl font-bold">
+                    <a href="/login">Al een account?</a>
+                </div>
+            </div>
             </div>
         </form>
     </x-jet-authentication-card>

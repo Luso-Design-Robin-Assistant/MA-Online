@@ -46,7 +46,7 @@
     background: #8C8;
     counter-increment: gallery-cell;
 }
-  
+
 .gallery-cell:before {
     display: block;
     text-align: center;

@@ -10,32 +10,26 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
-        <div class="ls-forms w-full	 h-full items-center">
-            <span class="text-5xl uppercase font-semibold">Inloggen</span>
+        <div class="ls-forms w-full	 h-full items-center ">
+            <span class="text-3xl md:text-5xl uppercase font-semibold" style="color: #EC008C">Inloggen</span>
             <div>
-                <x-jet-input id="email" class="block mt-3 w-full border-b-1	border-none" type="email" name="email" :value="old('email')" required autofocus />
+                <x-jet-input id="email" placeholder="Email:" style="background:transparent; color: white; border:none; border-bottom: 2px solid white; " class="mt-16 block mt-3 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
             <div class="mt-4">
-                <x-jet-input id="password"  class="block mt-3 w-full border-none  border-b-1	" type="password" name="password" required autocomplete="current-password" />
+                <x-jet-input id="password" placeholder="Wachtwoord:" style="background:transparent; color: white; border:none; border-bottom: 2px solid white; " class="mt-12 block mt-3 w-full " type="password" name="password" required autocomplete="current-password" />
             </div>
-
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-
+            <x-jet-button class="mt-12 text-center">
+                    {{ __('Inloggen') }}
+            </x-jet-button>
             <div class="flex flex-col mt-4">
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
+                    <a class=" text-xl text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                        {{ __('Wachtwoord vergeten?') }}
                     </a>
                 @endif
-
-                <x-jet-button class="mt-4 text-center">
-                    {{ __('Log in') }}
-                </x-jet-button>
+            </div>
+            <div class="block mt-4 text-2xl font-bold">
+                <a href="/register">Nog geen account?</a>
             </div>
         </div>
         </form>
