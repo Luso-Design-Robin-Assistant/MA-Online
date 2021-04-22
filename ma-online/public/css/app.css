@@ -20649,16 +20649,6 @@ select {
 
 /* 1. Navbar styling */
 
-.ld-transparent {
-  background-color: transparent;
-  transition: .25s ease-in;
-}
-
-.ld-white {
-  background-color: white;
-  transition: .25s ease-in;
-}
-
 /* 2. Carousel styling */
 
 .flickity-button {

@@ -23,7 +23,7 @@
     <body>
 
         <!-- Navbar -->
-        <div class="ld-navbar fixed ld-transparent w-full z-50">
+        <div class="ld-navbar fixed bg-white bg-opacity-75 transition-colors w-full z-50">
             <div class="container mx-auto p-8">
                 <nav class="flex uppercase">
                     <div class="ld-logo flex align-middle justify-center h-12">
@@ -31,21 +31,21 @@
                             <img class="ls-logo w-20" src="{{ url('/images/logo.png') }}" alt="logo-placeholder">
                         </a>
                     </div>
-                    <ul class="ld-main-nav flex-1 hidden lg:flex self-center flex-row text-white ml-10 text-md md:text-lg lg:text-xl">
+                    <ul class="ld-main-nav flex-1 hidden lg:flex self-center flex-row text-black ml-10 text-md md:text-lg lg:text-xl">
                         <li><a class="mr-10 whitespace-nowrap" href="#mediacollege">Mediacollege</a></li>
                         <li><a class="mr-10 whitespace-nowrap" href="#ma-online">Ma online</a></li>
                         <li><a class="mr-10 whitespace-nowrap" href="#geen-account">Geen acount?</a></li>
                         <li><a class="mr-10 whitespace-nowrap" href="#proeflessen">Proeflessen</a></li>
                     </ul>
-                    <div class="ld-login flex text-white ml-auto lg:ml-0">
+                    <div class="ld-login flex text-black ml-auto lg:ml-0">
                         <a class="text-xl self-center py-2 px-4" href="{{ route('login') }}">Inloggen</a>
                     </div>
                     <div class="flex lg:hidden">
                         <input id="toggle1" class="hidden" type="checkbox" />
                         <label class="ld-hamburger1" for="toggle1">
-                            <div class="ld-top bg-white relative mt-ham"></div>
-                            <div class="ld-meat bg-white relative mt-ham"></div>
-                            <div class="ld-bottom bg-white relative mt-ham"></div>
+                            <div class="ld-top bg-black relative mt-ham"></div>
+                            <div class="ld-meat bg-black relative mt-ham"></div>
+                            <div class="ld-bottom bg-black relative mt-ham"></div>
                         </label>
                         <nav class="ld-menu1 w-auto flex flex-col text-white text-2xl text-center absolute top-28 right-0 z-50 overflow-hidden py-24 px-20">
                             <div class="w-full h-full bg-white bg-opacity-10 backdrop-filter backdrop-blur-2xl absolute top-0 left-0 z-0"></div>
@@ -61,7 +61,7 @@
 
         <!-- Hero image -->
         <div id="top" class="w-full h-screen bg-hero-image bg-no-repeat bg-center bg-cover">
-            <div class="w-full h-full opacity-50 bg-gradient-to-b from-black via-gray-300 to-gray-400"></div>
+            <!-- <div class="w-full h-full opacity-50 bg-gradient-to-b from-black via-gray-300 to-gray-400"></div> -->
         </div>
 
         <!-- Content -->
@@ -72,7 +72,7 @@
                     <div class="ld-content flex flex-col w-full place-content-center relative md:static md:w-2/4 px-6 sm:px-4 md:px-0">
                         <div class="w-90 md:w-110 mx-auto md:mx-auto bg-white relative -top-10 md:-top-0 md:static p-6 sm:p-14 z-10 overflow-visible">
                             <span id="mediacollege" class="text-3xl sm:text-4xl font-bold px-4 md:px-0">Mediacollege</span>
-                            <p class="mb-8 md:mb-0 px-4 md:px-0" >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                            <p class="mb-8 md:mb-0 pt-8 px-4 md:px-0" >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                     <div class="ld-content flex flex-col w-full place-content-center relative md:static md:w-2/4 px-6 sm:px-4 md:px-0" style="direction: rtl;">
                         <div class="w-90 md:w-110 mx-auto md:mx-auto bg-white relative -top-10 md:-top-0 md:static p-6 sm:p-14 border-green border-solid border-10 overflow-visible float-right" style="direction: ltr;">
                             <span class="text-3xl sm:text-4xl font-bold mb-8 px-4 md:px-0">MA Online</span>
-                            <p class="px-4 md:px-0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                            <p class="pt-8 px-4 md:px-0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
                         </div>
                     </div>

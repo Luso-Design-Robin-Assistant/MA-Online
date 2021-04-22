@@ -16,25 +16,11 @@ require('alpinejs');
 // 1. Header on scroll styling event
 $(window).on("scroll", function() {
     if ($(window).scrollTop() == 0) {
-        $(".ld-navbar").removeClass("ld-white");
-        $(".ld-main-nav").removeClass("text-black");
-        $(".ld-login").removeClass("text-black");
+        $(".ld-navbar").addClass("bg-opacity-75");
         $(".ld-navbar").removeClass("shadow");
-        $(".ld-main-nav").addClass("text-white");
-        $(".ld-login").addClass("text-white");
-        $(".ld-navbar").addClass("ld-transparent");
-        $(".ld-top, .ld-meat, .ld-bottom").removeClass("bg-black");
-        $(".ld-top, .ld-meat, .ld-bottom").addClass("bg-white");
     } else if ($(window).scrollTop() > 0) {
-        $(".ld-navbar").removeClass("ld-transparent");
-        $(".ld-main-nav").removeClass("text-white");
-        $(".ld-login").removeClass("text-white");
-        $(".ld-navbar").addClass("ld-white");
-        $(".ld-main-nav").addClass("text-black");
-        $(".ld-login").addClass("text-black");
+        $(".ld-navbar").removeClass("bg-opacity-75");
         $(".ld-navbar").addClass("shadow");
-        $(".ld-top, .ld-meat, .ld-bottom").addClass("bg-black");
-        $(".ld-top, .ld-meat, .ld-bottom").removeClass("bg-white");
     }
 });
 
