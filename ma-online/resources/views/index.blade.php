@@ -147,8 +147,8 @@
         </div>
 
         <!-- Footer -->
-        <div class="w-full bg-gray-800">
-            <div class="container mx-auto" >
+        <div class="w-full bg-gray-800 shadow-xl">
+            <div class="container mx-auto">
                 <footer class="ld-footer flex w-full flex-col md:flex-row py-8 uppercase text-white">
                     <div class="flex flex-1 place-content-center items-center" >
                         <a class="text-xl p-4" href="#mediacollege">Mediacollege</a>
