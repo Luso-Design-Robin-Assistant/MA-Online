@@ -11,7 +11,7 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
         <div class="ls-forms w-full	 h-full items-center ">
-            <span class="text-3xl md:text-5xl uppercase font-semibold" style="color: #EC008C">Inloggen</span>
+            <span class="text-3xl md:text-5xl uppercase  text-pink" >Inloggen</span>
             <div>
                 <x-jet-input id="email" placeholder="Email:" style="background:transparent; color: white; border:none; border-bottom: 2px solid white; " class="mt-16 block mt-3 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
