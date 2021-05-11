@@ -29,7 +29,7 @@
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <div class="pt-2 relative mx-auto text-gray-600">
-                    <input class="border-1 border-gray-300 bg-white h-10 px-5 pr-16 rounded-full	 text-sm focus:outline-none"
+                    <input class="border-1 border-gray-300 bg-white h-10 px-5 pr-16 rounded-full text-sm focus:outline-none"
                         type="search" name="search">
                         <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
                         <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
