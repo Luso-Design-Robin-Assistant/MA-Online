@@ -1,10 +1,10 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Delete Account') }}
+        {{ __('Verwijder Account') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Permanently delete your account.') }}
+        {{ __('Permanent je account verwijderen.') }}
     </x-slot>
 
     <x-slot name="content">
@@ -14,14 +14,14 @@
 
         <div class="mt-5">
             <x-jet-danger-button wire:click="confirmUserDeletion" wire:loading.attr="disabled">
-                {{ __('Delete Account') }}
+                {{ __('Verwijder Account') }}
             </x-jet-danger-button>
         </div>
 
         <!-- Delete User Confirmation Modal -->
         <x-jet-dialog-modal wire:model="confirmingUserDeletion">
             <x-slot name="title">
-                {{ __('Delete Account') }}
+                {{ __('Verwijder Account') }}
             </x-slot>
 
             <x-slot name="content">
@@ -44,7 +44,7 @@
                 </x-jet-secondary-button>
 
                 <x-jet-danger-button class="ml-2" wire:click="deleteUser" wire:loading.attr="disabled">
-                    {{ __('Delete Account') }}
+                    {{ __('Verwijder Account') }}
                 </x-jet-danger-button>
             </x-slot>
         </x-jet-dialog-modal>
