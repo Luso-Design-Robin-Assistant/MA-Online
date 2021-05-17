@@ -69,8 +69,8 @@
             {{ __('Opgeslagen.') }}
         </x-jet-action-message>
 
-        <x-jet-button wire:loading.attr="disabled" wire:target="photo">
-            {{ __('Sla op') }}
-        </x-jet-button>
+        <x-jet-secondary-button wire:loading.attr="disabled" wire:target="photo">
+            {{ __('Opslaan') }}
+        </x-jet-secondary-button>
     </x-slot>
 </x-jet-form-section>

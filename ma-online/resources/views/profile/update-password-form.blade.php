@@ -28,8 +28,8 @@
             {{ __('Opgeslagen.') }}
         </x-jet-action-message>
 
-        <x-jet-button>
-            {{ __('Sla op') }}
-        </x-jet-button>
+        <x-jet-secondary-button>
+            {{ __('Opslaan') }}
+        </x-jet-secondary-button>
     </x-slot>
 </x-jet-form-section>
