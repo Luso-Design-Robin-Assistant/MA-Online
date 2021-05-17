@@ -9,9 +9,6 @@
                         <img class="ls-logo w-20" src="{{ url('/images/logo.png') }}" alt="logo-placeholder">
                     </a>
                 </div>
-            @if($isOpen ?? '')
-                @include('livewire.create')
-            @endif
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
@@ -20,9 +17,11 @@
                     <x-jet-nav-link href="" :active="request()->routeIs('Units')">
                         {{ __('Units') }}
                     </x-jet-nav-link>
-                    <button wire:click="create()" class="inline-flex text-base items-center uppercase font-semibold	px-1 pt-1 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition">Uploaden</button>
                     <x-jet-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('Upload')">
                         {{ __('Profile') }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="/create" :active="request()->routeIs('Upload')">
+                        {{ __('Create') }}
                     </x-jet-nav-link>
                 </div>
             </div>

@@ -6,7 +6,7 @@
         </div>
 
         <!-- This element is to trick the browser into centering the modal contents. -->
-        <span class="hidden sm:inline-block sm:align-middle sm:h-screen"></span>​
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen"></span>
 
         <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
             <form>
@@ -27,23 +27,18 @@
 
                 <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
         <span class="flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto">
-          <button wire:click.prevent="store()" type="button" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 text-base leading-6 font-medium shadow-sm transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+          <button wire:click.prevent="store()" type="button" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">
             Save
           </button>
         </span>
-        <span class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto">
-          <button wire:click="closeModal()" type="button" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 text-base leading-6 font-medium shadow-sm transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                    <span class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto">
+
+          <button wire:click="closeModal()" type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5">
             Cancel
           </button>
         </span>
-        @foreach($posts as $post)
-        <span class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto">
-            <button wire:click="delete({{ $post->id }})" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 text-base leading-6 font-medium shadow-sm transition ease-in-out duration-150 sm:text-sm sm:leading-5">delete</button
-        </span>
-        @endforeach
             </form>
         </div>
+
     </div>
-    </div>
-</div>
 </div>

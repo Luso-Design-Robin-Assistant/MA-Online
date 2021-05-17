@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Posts;
+use App\Http\Livewire\Create;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,9 +18,11 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', Posts::class , function () {
     return view('dashboard');
 })->name('dashboard');
 
 Route::get('post', Posts::class);
 
+Route::get('create', Create::class);
