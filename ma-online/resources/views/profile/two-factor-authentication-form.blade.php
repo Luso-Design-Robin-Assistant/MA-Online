@@ -3,10 +3,6 @@
         {{ __('Twee Staps Verificatie') }}
     </x-slot>
 
-    <x-slot name="description">
-        {{ __('Voeg extra security toe aan jouw account door gebruik te maken van twee staps verificatie.') }}
-    </x-slot>
-
     <x-slot name="content">
         <h3 class="text-lg font-medium text-gray-900">
             @if ($this->enabled)
