@@ -3,10 +3,6 @@
         {{ __('Browser Sessies') }}
     </x-slot>
 
-    <x-slot name="description">
-        {{ __('Log uit en beheer je huidige actieve sessies op andere browsers en apparaten.') }}
-    </x-slot>
-
     <x-slot name="content">
         <div class="max-w-xl text-sm text-gray-600">
             {{ __('If necessary, you may log out of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password.') }}
@@ -52,9 +48,9 @@
         @endif
 
         <div class="flex items-center mt-5">
-            <x-jet-button wire:click="confirmLogout" wire:loading.attr="disabled">
-                {{ __('Andere browser sessies uitloggen') }}
-            </x-jet-button>
+            <x-jet-secondary-button wire:click="confirmLogout" wire:loading.attr="disabled">
+                {{ __('Log apparaten uit') }}
+            </x-jet-secondary-button>
 
             <x-jet-action-message class="ml-3" on="loggedOut">
                 {{ __('Klaar.') }}
@@ -64,7 +60,7 @@
         <!-- Log Out Other Devices Confirmation Modal -->
         <x-jet-dialog-modal wire:model="confirmingLogout">
             <x-slot name="title">
-                {{ __('Andere browser sessies uitloggen') }}
+                {{ __('Log apparaten uit') }}
             </x-slot>
 
             <x-slot name="content">
@@ -86,11 +82,11 @@
                     {{ __('Cancel') }}
                 </x-jet-secondary-button>
 
-                <x-jet-button class="ml-2"
+                <x-jet-secondary-button class="ml-2"
                             wire:click="logoutOtherBrowserSessions"
                             wire:loading.attr="disabled">
-                    {{ __('Andere browser sessies uitloggen') }}
-                </x-jet-button>
+                    {{ __('Log apparaten uit') }}
+                </x-jet-secondary-button>
             </x-slot>
         </x-jet-dialog-modal>
     </x-slot>
