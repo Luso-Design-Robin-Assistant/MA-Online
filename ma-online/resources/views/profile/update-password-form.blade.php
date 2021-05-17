@@ -3,6 +3,10 @@
         {{ __('Update Wachtwoord') }}
     </x-slot>
 
+    <x-slot name="description">
+        {{ __('Zorg ervoor dat je account een lang en willekeurig wachtwoord heeft.') }}
+    </x-slot>
+
     <x-slot name="form">
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="current_password" value="{{ __('Huidig Wachtwoord') }}" />
@@ -28,8 +32,8 @@
             {{ __('Opgeslagen.') }}
         </x-jet-action-message>
 
-        <x-jet-secondary-button>
-            {{ __('Opslaan') }}
-        </x-jet-secondary-button>
+        <x-jet-button>
+            {{ __('Sla op') }}
+        </x-jet-button>
     </x-slot>
 </x-jet-form-section>

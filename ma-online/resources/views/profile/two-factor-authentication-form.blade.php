@@ -3,6 +3,10 @@
         {{ __('Twee Staps Verificatie') }}
     </x-slot>
 
+    <x-slot name="description">
+        {{ __('Voeg extra security toe aan jouw account door gebruik te maken van twee staps verificatie.') }}
+    </x-slot>
+
     <x-slot name="content">
         <h3 class="text-lg font-medium text-gray-900">
             @if ($this->enabled)
@@ -49,9 +53,9 @@
         <div class="mt-5">
             @if (! $this->enabled)
                 <x-jet-confirms-password wire:then="enableTwoFactorAuthentication">
-                    <x-jet-secondary-button type="button" wire:loading.attr="disabled">
+                    <x-jet-button type="button" wire:loading.attr="disabled">
                         {{ __('Aanzetten') }}
-                    </x-jet-secondary-button>
+                    </x-jet-button>
                 </x-jet-confirms-password>
             @else
                 @if ($showingRecoveryCodes)

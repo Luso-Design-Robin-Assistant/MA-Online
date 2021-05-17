@@ -4,6 +4,10 @@
         {{ __('Profiel Informatie') }}
     </x-slot>
 
+    <x-slot name="description">
+        {{ __('') }}
+    </x-slot>
+
     <x-slot name="form">
         <!-- Profile Photo -->
         @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
@@ -31,7 +35,7 @@
                 <!-- New Profile Photo Preview -->
                 <div class="mt-2" x-show="photoPreview">
                     <span class="block rounded-full w-20 h-20"
-                        x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'">
+                          x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'">
                     </span>
                 </div>
 
@@ -69,8 +73,8 @@
             {{ __('Opgeslagen.') }}
         </x-jet-action-message>
 
-        <x-jet-secondary-button wire:loading.attr="disabled" wire:target="photo">
-            {{ __('Opslaan') }}
-        </x-jet-secondary-button>
+        <x-jet-button wire:loading.attr="disabled" wire:target="photo">
+            {{ __('Sla op') }}
+        </x-jet-button>
     </x-slot>
 </x-jet-form-section>
