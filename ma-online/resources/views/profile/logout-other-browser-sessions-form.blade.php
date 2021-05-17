@@ -52,9 +52,9 @@
         @endif
 
         <div class="flex items-center mt-5">
-            <x-jet-button wire:click="confirmLogout" wire:loading.attr="disabled">
+            <x-jet-secondary-button wire:click="confirmLogout" wire:loading.attr="disabled">
                 {{ __('Andere browser sessies uitloggen') }}
-            </x-jet-button>
+            </x-jet-secondary-button>
 
             <x-jet-action-message class="ml-3" on="loggedOut">
                 {{ __('Klaar.') }}
@@ -86,11 +86,11 @@
                     {{ __('Cancel') }}
                 </x-jet-secondary-button>
 
-                <x-jet-button class="ml-2"
+                <x-jet-secondary-button class="ml-2"
                             wire:click="logoutOtherBrowserSessions"
                             wire:loading.attr="disabled">
                     {{ __('Andere browser sessies uitloggen') }}
-                </x-jet-button>
+                </x-jet-secondary-button>
             </x-slot>
         </x-jet-dialog-modal>
     </x-slot>
