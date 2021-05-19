@@ -7,7 +7,7 @@ use App\Models\Post;
 
 class Create extends Component
 {
-    public $posts, $title, $body, $post_id;
+    public $posts, $title, $body, $post_id, $url;
     public $isOpen = 0;
 
     /**
@@ -61,6 +61,7 @@ class Create extends Component
         $this->title = '';
         $this->body = '';
         $this->post_id = '';
+        $this->url = '';
     }
 
     /**
@@ -73,11 +74,13 @@ class Create extends Component
         $this->validate([
             'title' => 'required',
             'body' => 'required',
+            'url' => 'required'
         ]);
 
         Post::updateOrCreate(['id' => $this->post_id], [
             'title' => $this->title,
-            'body' => $this->body
+            'body' => $this->body,
+            'url' => $this->url
         ]);
 
         session()->flash('message',
@@ -97,7 +100,7 @@ class Create extends Component
         $this->post_id = $id;
         $this->title = $post->title;
         $this->body = $post->body;
-
+        $this->url = $post->url;
         $this->openModal();
     }
 

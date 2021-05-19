@@ -37,16 +37,6 @@ class Posts extends Component
      *
      * @var array
      */
-    public function openModal()
-    {
-        $this->isOpen = true;
-    }
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     public function closeModal()
     {
         $this->isOpen = false;
@@ -61,6 +51,7 @@ class Posts extends Component
         $this->title = '';
         $this->body = '';
         $this->post_id = '';
+        $this->url = '';
     }
 
     /**
@@ -73,11 +64,13 @@ class Posts extends Component
         $this->validate([
             'title' => 'required',
             'body' => 'required',
+            'url' => 'required',
         ]);
 
         Post::updateOrCreate(['id' => $this->post_id], [
             'title' => $this->title,
-            'body' => $this->body
+            'body' => $this->body,
+            'url' => $this->url
         ]);
 
         session()->flash('message',
@@ -97,7 +90,7 @@ class Posts extends Component
         $this->post_id = $id;
         $this->title = $post->title;
         $this->body = $post->body;
-
+        $this->url = $post->url;
         $this->openModal();
     }
 

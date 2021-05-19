@@ -1,14 +1,13 @@
 
 <form class="bg-gray-800 max-w-80 flex flex-row justify-around items-center" style="height: 90.4vh">
-
         <div class="ls-left flex w-3/12	flex-col">
             <div class="mb-10">
                 <input type="file" class="min-h-full h-96 w-full bg-white border-green-200 border-6 shadow appearance-none rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1">
                 @error('body') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
             <div class="mb-4">
-                <input type="text" class="border-yellow border-6 shadow appearance-none rounded text-black w-full py-4 px-3 placeholder-black::placeholder leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="VIDEO URL: Hier komt de link vanaf een ander platform" wire:model="">
-                @error('title') <span class="text-red-500">{{ $message }}</span>@enderror
+                <input type="text" name="url" class="border-yellow border-6 shadow appearance-none rounded text-black w-full py-4 px-3 placeholder-black::placeholder leading-tight focus:outline-none focus:shadow-outline" id="url" placeholder="VIDEO URL: Hier komt de link vanaf een ander platform" wire:model="url">
+                @error('url') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
         </div>
         <div class="ls-center w-3/12 flex flex-col" style="justify-content: inherit">
