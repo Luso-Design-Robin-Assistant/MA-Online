@@ -35,16 +35,18 @@
                             x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'">
                         </span>
                     </div>
-
-                    <x-jet-profile-button class="mt-6 mr-2" type="button" x-on:click.prevent="$refs.photo.click()">
-                        {{ __('Nieuwe foto kiezen') }}
-                    </x-jet-profile-button>
-
-                    @if ($this->user->profile_photo_path)
-                        <x-jet-profile-button type="button" class="mt-2" wire:click="deleteProfilePhoto">
-                            {{ __('Verwijder foto') }}
+                    
+                    <div class="w-full flex justify-center">
+                        <x-jet-profile-button class="mx-2" type="button" x-on:click.prevent="$refs.photo.click()">
+                            {{ __('Nieuwe foto kiezen') }}
                         </x-jet-profile-button>
-                    @endif
+
+                        @if ($this->user->profile_photo_path)
+                            <x-jet-profile-button type="button" class="mx-2" wire:click="deleteProfilePhoto">
+                                {{ __('Verwijder foto') }}
+                            </x-jet-profile-button>
+                        @endif
+                    </div>
 
                     <x-jet-input-error for="photo" class="mt-2" />
                 </div>
