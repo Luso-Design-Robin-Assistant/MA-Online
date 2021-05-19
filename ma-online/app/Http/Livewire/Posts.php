@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 use App\Models\Post;
 
@@ -10,6 +11,13 @@ class Posts extends Component
     public $posts, $title, $body, $post_id;
     public $isOpen = 0;
 
+    function index(){
+        $data = array(
+            'list'=> DB::table('posts')->get()
+        );
+
+        return view('posts.index', $data);
+    }
     /**
      * The attributes that are mass assignable.
      *
