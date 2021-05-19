@@ -80,7 +80,7 @@ class Create extends Component
         Post::updateOrCreate(['id' => $this->post_id], [
             'title' => $this->title,
             'body' => $this->body,
-            'url' => $this->url
+            'url' => $this->url,
         ]);
 
         session()->flash('message',
