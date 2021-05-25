@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Posts;
 use App\Http\Livewire\Create;
+use App\Http\Controllers\Profile;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,15 +16,22 @@ use App\Http\Livewire\Create;
 |
 */
 
+// Info page
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
 
-
+// Dashboard
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', Posts::class , function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::get('post', Posts::class);
+// User page
+Route::get('user/profile', [Profile::class, 'userProfile'])->name('user/profile');
 
-Route::get('create', Create::class);
+// Post page
+Route::get('post', Posts::class)->name('post');
+
+
+// Create page 
+Route::get('create', Create::class)->name('create');
