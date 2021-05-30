@@ -30,10 +30,11 @@
     </div>
 </x-slot>
 
-<form class="bg-gray-800 container h-screen mx-auto py-16 sm:px-6 lg:px-8 flex flex-row justify-around" style="height: calc(100vh - 189px)">
+<form class="bg-gray-800 container h-screen mx-auto py-16 sm:px-6 lg:px-8 flex flex-row justify-around" style="height: calc(100vh - 189px)" action="{{ route('store') }}">
+    @csrf
     <div class="ld-left w-5/12 mr-8 flex flex-col justify-between">
         <div class="mb-10">
-            <input type="file" class="w-full bg-white border-green-200 border-6 shadow cursor-pointer appearance-none py-3 px-3 leading-tight focus:outline-none focus:shadow-outline" style="height: 55vh" id="exampleFormControlInput1">
+            <input type="file" class="w-full bg-white border-green-200 border-6 shadow cursor-pointer appearance-none py-3 px-3 leading-tight focus:outline-none focus:shadow-outline" style="height: 55vh" id="exampleFormControlInput1" wire:model="video">
             @error('body') <span class="text-red-500">{{ $message }}</span>@enderror
         </div>
         <div>

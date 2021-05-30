@@ -16,7 +16,7 @@
             <x-slot name="header">
                 <div class="flex flex-row justify-between">
                     <h2 class="font-semibold uppercase text-4xl text-pink leading-tight">
-                        {{ __('Newest post') }}
+                        {{ __('Dashboard') }}
                     </h2>
 
                     <div class="relative text-gray-600">

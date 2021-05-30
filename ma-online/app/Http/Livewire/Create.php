@@ -4,10 +4,13 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Post;
+use Livewire\WithFileUploads;
+use Illuminate\Http\Request;
 
 class Create extends Component
 {
-    public $posts, $title, $body, $post_id, $url;
+    use WithFileUploads;
+    public $posts, $title, $body, $post_id, $url, $video;
     public $isOpen = 0;
 
     /**
@@ -69,25 +72,30 @@ class Create extends Component
      *
      * @var array
      */
-    public function store()
+    public function store(Request $request)
     {
         $this->validate([
-            'title' => 'required',
-            'body' => 'required',
-            'url' => 'required'
-        ]);
+        'title' => 'required',
+        'body' => 'required',
+        'url' => 'required',
+        'video' => 'required|mimes:mp4,mov,ogg,qt | max:20000'
 
+    ]);
+//        Post::make($this->video)->save('storage/' . $this->video);										// Saving the file to the storage
+        var_dump($request);
         Post::updateOrCreate(['id' => $this->post_id], [
             'title' => $this->title,
             'body' => $this->body,
             'url' => $this->url,
+            'video' => $this->video,
         ]);
 
         session()->flash('message',
             $this->post_id ? 'Post Updated Successfully.' : 'Post Created Successfully.');
 
-        $this->closeModal();
         $this->resetInputFields();
+        redirect('/dashboard');
+
     }
     /**
      * The attributes that are mass assignable.

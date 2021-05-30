@@ -33,5 +33,6 @@ Route::get('user/profile', [Profile::class, 'userProfile'])->name('user/profile'
 Route::get('post', Posts::class)->name('post');
 
 
-// Create page 
+// Create page
 Route::get('create', Create::class)->name('create');
+Route::post('/store', [Create::class, 'store'])->name('store');
