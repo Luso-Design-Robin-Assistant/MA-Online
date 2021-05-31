@@ -34,7 +34,7 @@ Route::get('user/profile/edit', [ShowProfile::class, 'profileEdit'])->name('prof
 // Post page
 Route::get('post', Posts::class)->name('post');
 
-
 // Create page
 Route::get('create', Create::class)->name('create');
 Route::post('/store', [Create::class, 'store'])->name('store');
+Route::get('/units/{id}', [Create::class, 'show'])->name('video');
