@@ -32,7 +32,7 @@ Route::get('user/profile', [Profile::class, 'userProfile'])->name('user/profile'
 // Post page
 Route::get('post', Posts::class)->name('post');
 
-
 // Create page
 Route::get('create', Create::class)->name('create');
 Route::post('/store', [Create::class, 'store'])->name('store');
+Route::get('/units/{id}', [Create::class, 'show'])->name('video');

@@ -2,13 +2,14 @@
 
 namespace App\Http\Livewire;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 use App\Models\Post;
 
 class Posts extends Component
 {
-    public $posts, $title, $body, $post_id;
+    public $posts, $title, $body, $post_id, $url, $video, $videoFilename;
     public $isOpen = 0;
 
     function index(){
@@ -34,10 +35,21 @@ class Posts extends Component
      *
      * @var array
      */
+
     public function create()
     {
         $this->resetInputFields();
         $this->openModal();
+    }
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    public function openModal()
+    {
+        $this->isOpen = true;
     }
 
     /**
@@ -67,26 +79,36 @@ class Posts extends Component
      *
      * @var array
      */
-    public function store()
+    public function store(Request $request)
     {
         $this->validate([
             'title' => 'required',
             'body' => 'required',
             'url' => 'required',
+            'video' => 'required'
         ]);
-
+        $videoFilename = $this->video->store('upload', 'public');
+        // Saving the file to the storage
         Post::updateOrCreate(['id' => $this->post_id], [
             'title' => $this->title,
             'body' => $this->body,
-            'url' => $this->url
+            'url' => $this->url,
+            'video' => $videoFilename,
         ]);
-
-        session()->flash('message',
-            $this->post_id ? 'Post Updated Successfully.' : 'Post Created Successfully.');
-
-        $this->closeModal();
-        $this->resetInputFields();
+        redirect('/dashboard');
     }
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+
+    public function show($id) {
+        $post = Post::find($id);
+        return view('posts.video', ['video' => $post]);
+    }
+
+
     /**
      * The attributes that are mass assignable.
      *
@@ -113,3 +135,5 @@ class Posts extends Component
         session()->flash('message', 'Post Deleted Successfully.');
     }
 }
+
+
