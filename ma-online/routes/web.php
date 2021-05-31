@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Posts;
 use App\Http\Livewire\Create;
+use App\Http\Livewire\ShowProfile;
 use App\Http\Controllers\Profile;
 
 /*
@@ -27,7 +28,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', Posts::class 
 })->name('dashboard');
 
 // User page
-Route::get('user/profile', [Profile::class, 'userProfile'])->name('user/profile');
+Route::get('user/profile', [ShowProfile::class, 'render'])->name('user/profile');
+Route::get('user/profile/edit', [ShowProfile::class, 'profileEdit'])->name('profile.show');
 
 // Post page
 Route::get('post', Posts::class)->name('post');

@@ -32,7 +32,7 @@
 
     <div>
         <div class="container mx-auto py-10 px-4 sm:px-6 lg:px-8">
-            <div class="mx-auto bg-white flex flex-col sm:w-full lg:w-4/5 xl:w-3/5">
+            <div class="mx-auto bg-gray-800 border-green-200 border-10 border-solid flex flex-col sm:w-full lg:w-4/5 xl:w-3/5">
                 <div class="w-full flex flex-row py-6">
                     <div class="flex flex-1 justify-end px-6">  
                         <div class="w-40 h-40">
@@ -48,10 +48,16 @@
                 </div>
                 <div class="w-full mx-auto py-6">
                 </div>
-                <div class="flex place-center flex-col w-full py-6 text-yellow">
-                    <a href="">Mijn uploads</a>
-                    <a href="">Mijn favorieten</a>
-                    <a href="">Profiel aanpassen</a>
+                <div class="flex flex-col items-center w-full py-6 text-yellow">
+                    <x-jet-yellow-button type="button" class="w-72" wire:click=""> 
+                        {{ __('Mijn uploads') }}
+                    </x-jet-yellow-button>
+                    <x-jet-yellow-button type="button" class="w-72" wire:click=""> 
+                        {{ __('Mijn favorieten') }}
+                    </x-jet-yellow-button>
+                    <x-jet-yellow-button type="button" class="w-72" wire:click=""> 
+                        {{ __('Profiel aanpassen') }}
+                    </x-jet-yellow-button>
                 </div>
             </div>
         </div>
