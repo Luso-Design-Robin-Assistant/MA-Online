@@ -41,9 +41,7 @@
                         </div>
                     </div>
                     <div class="flex flex-1 flex-col justify-center text-green-100 px-6">
-                        @foreach($user as $user)
-                            <h3 class="text-2xl">{{ $user }}</h3>
-                        @endforeach
+                        <h3 class="text-2xl">{{ $user }}</h3>
                         <p class="w-2/3">
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                         </p>
