@@ -39,21 +39,21 @@
                 </label>
                 <nav class="ld-menu1 w-auto flex flex-col text-white text-2xl text-center absolute top-28 right-0 z-50 overflow-hidden py-24 px-20">
                     <div class="w-full bold h-full bg-white bg-opacity-10 backdrop-filter backdrop-blur-2xl absolute top-0 left-0 z-0"></div>
-                    <x-jet-nav-link href="/" :active="request()->routeIs('/')">
+                    <a href="/" class="ld-link1 py-8 z-10">
                         {{ __('Informatie Pagina') }}
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    </a>
+                    <a href="/dashboard" class="ld-link1 py-8 z-10">
                         {{ __('Dashboard') }}
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="" :active="request()->routeIs('units')">
+                    </a>
+                    <a href="/dashboard" class="ld-link1 py-8 z-10">
                         {{ __('Units') }}
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('user/profile') }}" :active="request()->routeIs('user/profile')">
+                    </a>
+                    <a href="/user/profile" class="ld-link1 py-8 z-10">
                         {{ __('Profile') }}
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="/create" :active="request()->routeIs('create')">
+                    </a>
+                    <a href="/create" class="ld-link1 py-8 z-10">
                         {{ __('Create') }}
-                    </x-jet-nav-link>
+                    </a>
                 </nav>
             </div>
         </div>
