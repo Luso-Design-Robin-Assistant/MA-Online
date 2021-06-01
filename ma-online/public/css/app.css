@@ -21069,7 +21069,7 @@ select {
 
 /* 3. Hamburger menu */
 
-.ld-hamburger1 {
+.ld-hamburger2 {
   height: 45px;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
@@ -21077,7 +21077,7 @@ select {
   z-index: 120;
 }
 
-.ld-hamburger1 div {
+.ld-hamburger1 {
   width: 40px;
   height: 5px;
   transition: all 0.2s ease-in-out;

@@ -1,9 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex flex-row justify-between">
-            <h2 class="font-semibold uppercase text-4xl text-pink leading-tight">
-                {{ __('Profiel') }}
-            </h2>
+            
+                <h2 class="font-semibold uppercase text-4xl text-pink leading-tight">
+                    {{ __('Profiel') }}
+                </h2>
 
             <div class="relative text-gray-600">
                 <div class="ls-searchbar">
@@ -40,7 +41,9 @@
                         </div>
                     </div>
                     <div class="flex flex-1 flex-col justify-center text-green-100 px-6">
-                        <h3 class="text-2xl">Naam</h3>
+                        @foreach($user as $user)
+                            <h3 class="text-2xl">{{ $user }}</h3>
+                        @endforeach
                         <p class="w-2/3">
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                         </p>
@@ -55,7 +58,7 @@
                     <x-jet-yellow-button type="button" class="w-72" wire:click=""> 
                         {{ __('Mijn favorieten') }}
                     </x-jet-yellow-button>
-                    <x-jet-yellow-button type="button" class="w-72" wire:click=""> 
+                    <x-jet-yellow-button type="button" class="w-72" wire:click="profileEdit"> 
                         {{ __('Profiel aanpassen') }}
                     </x-jet-yellow-button>
                 </div>

@@ -23,7 +23,7 @@
                 <x-jet-nav-link href="" :active="request()->routeIs('units')">
                     {{ __('Units') }}
                 </x-jet-nav-link>
-                <x-jet-nav-link href="{{ route('user/profile') }}" :active="request()->routeIs('user/profile')">
+                <x-jet-nav-link href="{{ route('profile', auth()->user()->name) }}" :active="request()->routeIs('profile')">
                     {{ __('Profile') }}
                 </x-jet-nav-link>
                 <x-jet-nav-link href="/create" :active="request()->routeIs('create')">
@@ -48,7 +48,7 @@
                     <a href="/dashboard" class="ld-link1 py-8 z-10">
                         {{ __('Units') }}
                     </a>
-                    <a href="/user/profile" class="ld-link1 py-8 z-10">
+                    <a href="{{ route('profile', auth()->user()->name) }}" class="ld-link1 py-8 z-10">
                         {{ __('Profile') }}
                     </a>
                     <a href="/create" class="ld-link1 py-8 z-10">

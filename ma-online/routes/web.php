@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Posts;
 use App\Http\Livewire\Create;
-use App\Http\Livewire\ShowProfile;
-use App\Http\Controllers\Profile;
+// use App\Http\Livewire\ShowProfile;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,13 +23,14 @@ Route::get('/', function () {
 })->name('home');
 
 // Dashboard
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', Posts::class , function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->group(function() {
+    // Dashboard page
+    Route::get('/dashboard', Posts::class)->name('dashboard');
 
-// User page
-Route::get('user/profile', [ShowProfile::class, 'render'])->name('user/profile');
-Route::get('user/profile/edit', [ShowProfile::class, 'profileEdit'])->name('profile.show');
+    // User page
+    Route::get('profile/{user}', [ProfileController::class, 'index'])->name('profile');
+    Route::get('profile/{user}/edit', [ProfileController::class, 'profileEdit'])->name('profile-edit');
+});
 
 // Post page
 Route::get('post', Posts::class)->name('post');
