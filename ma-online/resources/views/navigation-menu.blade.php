@@ -1,5 +1,7 @@
 <nav x-data="{ open: false }" class="bg-gray-800 text-white">
     <!-- Primary Navigation Menu -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-24">
             <div class="flex">

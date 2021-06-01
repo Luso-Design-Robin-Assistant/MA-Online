@@ -48,7 +48,7 @@
                             <div class="ld-bottom bg-black relative mt-ham"></div>
                         </label>
                         <nav class="ld-menu1 w-auto flex flex-col text-white text-2xl text-center absolute top-28 right-0 z-50 overflow-hidden py-24 px-20">
-                            <div class="w-full h-full bg-white bg-opacity-10 backdrop-filter backdrop-blur-2xl absolute top-0 left-0 z-0"></div>
+                            <div class="w-full bold h-full bg-white bg-opacity-10 backdrop-filter backdrop-blur-2xl absolute top-0 left-0 z-0"></div>
                             <a class="ld-link1 py-8 z-10" href="#mediacollege">Mediacollege</a>
                             <a class="ld-link1 py-8 z-10" href="#ma-online">Ma online</a>
                             <a class="ld-link1 py-8 z-10" href="#geen-account">Geen account?</a>
@@ -72,8 +72,10 @@
                     <div class="ld-content flex flex-col w-full place-content-center relative md:static md:w-2/4 px-6 sm:px-4 md:px-0">
                         <div class="w-90 md:w-110 mx-auto md:mx-auto bg-white relative -top-10 md:-top-0 md:static p-6 sm:p-14 z-10 overflow-visible">
                             <span id="mediacollege" class="text-3xl sm:text-4xl font-bold px-4 md:px-0">Mediacollege</span>
-                            <p class="mb-8 md:mb-0 pt-8 px-4 md:px-0" >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
+                            <p class="mb-8 md:mb-0 pt-8 px-4 md:px-0" >Ma is een vakschool voor de media. Je hebt de keus uit 14 praktijkgerichte opleidingen waarmee je straks aan de slag kunt in de entertainmentwereld, de game-industrie, een ontwerpbureau, reclamebureau of bijvoorbeeld een bureau voor standbouw. Welke opleiding je ook kiest, je wordt opgeleid tot een professional in het vak van jouw keus.
+                                <br> <br>
+                                Tijdens je opleiding doe je mee aan projecten, waarbij je samenwerkt met studenten van andere opleidingen. Professionals in de mediabranche moeten namelijk niet alleen goed zijn in hun eigen vak. Ze moeten ook kunnen samenwerken met mensen met een andere specialisatie.
+                            </p>
                         </div>
                     </div>
                     <div class="w-full md:w-2/4 flex">
@@ -87,10 +89,13 @@
                         <img class="place-self-center self-center flex-shrink-0 px-6 sm:px-4 md:px-0" src="{{ url('/images/About_IMG_MA_online.jpg') }}"  alt="semi">
                     </div>
                     <div class="ld-content flex flex-col w-full place-content-center relative md:static md:w-2/4 px-6 sm:px-4 md:px-0" style="direction: rtl;">
-                        <div class="w-90 md:w-110 mx-auto md:mx-auto bg-white relative -top-10 md:-top-0 md:static p-6 sm:p-14 border-green border-solid border-10 overflow-visible float-right" style="direction: ltr;">
+                        <div class="w-90 md:w-110 mx-auto md:mx-auto bg-white relative -top-10 md:-top-0 md:static p-6 sm:p-14 border-green-200 border-solid border-10 overflow-visible float-right" style="direction: ltr;">
                             <span class="text-3xl sm:text-4xl font-bold mb-8 px-4 md:px-0">MA Online</span>
-                            <p class="pt-8 px-4 md:px-0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
+                            <p class="pt-8 px-4 md:px-0">Ma Online is dé online leeromgeving voor een leven lang ontwikkelen voor onze huidige en aspirant studenten, voor docenten en ondersteunende medewerkers, voor alumni en beroepsprofessionals.
+                                <br> <br>
+                                Het platform is de centrale leeromgeving waar kennis- en leermateriaal wordt aangeboden en uitgewisseld. Docenten kunnen het materiaal, ook van collega’s, inzetten in hun lespraktijk en studenten kunnen zelf op zoek naar materiaal dat aansluit bij hun leerbehoefte. Studenten krijgen op deze manier ruimte om hun eigen studieloopbaan uit te stippelen en interesses te voeden buiten de opleiding om. Het platform voorziet in deze behoefte door het open toegankelijk maken van al het leermateriaal dat wordt aangeboden.
+
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -99,15 +104,14 @@
                 <div class="w-full bg-gray-800 bg-opacity-50">
                     <div class="container mx-auto flex flex-col place-items-center content-center py-32 md:py-46">
                         <span class="text-4xl sm:text-5xl text-center text-white font-bold mb-12">NOG GEEN ACCOUNT?</span>
-                        <a class="text-2xl sm:text-3xl bg-transparent hover:bg-green text-center text-green hover:text-white font-bold transition-colors border-green border-solid border-8 rounded-full py-8 px-16" href="{{ route('register') }}">MELD JE AAN</a>
+                        <a class="text-2xl sm:text-3xl bg-transparent hover:bg-green text-center text-green-200 hover:text-white font-bold transition-colors border-green-200 border-solid border-8 rounded-full py-4 px-16" href="{{ route('register') }}">MELD JE AAN</a>
                     </div>
                 </div>
             </div>
             <div id="proeflessen" class="w-full">
                 <div class="container mx-auto flex flex-col pt-32 pb-20 px-6 sm:px-4 md:px-0">
                     <span class="text-4xl sm:text-5xl font-bold text-pink pb-12">PROEFLESSEN</span>
-                    <p class="w-full bg-white p-6 sm:p-14 border-yellow border-solid border-10">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
+                    <p class="w-full bg-white p-6 sm:p-14 border-yellow border-solid border-10">Ben je benieuwd naar wat wij allemaal in huis hebben? Volg dan een proefles! Er is een selectie gemaakt van verschillende proeflessen, zodat je een goed beeld krijgt van de mogelijkheden op Ma online. Sommige lessen zijn gericht op bepaalde softwarepakketten, zoals bijv: Photoshop, Illustrator en Indesign.</p>
                 </div>
                 <div class="w-full container mx-auto pb-32">
                     <div class="gallery js-flickity" data-flickity-options='{ "freeScroll": false, "wrapAround": true }'>
@@ -133,12 +137,6 @@
                             <a class="flex flex-col place-items-center" href="#">
                                 <span class="text-xl text-black md:text-2xl text-center pb-14">XD</span>
                                 <img src="{{ url('/images/Icon_XD.png') }}" alt="XD icon">
-                            </a>
-                        </div>
-                        <div class="gallery-cell w-3/5 md:w-2/5 lg:w-1/5 bg-white p-14 mr-40">
-                            <a class="flex flex-col place-items-center" href="#">
-                                <span class="text-xl text-black md:text-2xl text-center pb-14">...</span>
-                                <img src="{{ url('/images/Icon_photoshop.png') }}" alt="... icon">
                             </a>
                         </div>
                     </div>
