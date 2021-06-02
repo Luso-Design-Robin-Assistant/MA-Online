@@ -9,7 +9,7 @@ use App\Models\Post;
 
 class Posts extends Component
 {
-    public $posts, $title, $body, $post_id, $url, $video, $videoFilename;
+    public $posts,$post, $title, $body, $post_id, $url, $video, $videoFilename;
     public $isOpen = 0;
 
     function index(){
@@ -107,7 +107,6 @@ class Posts extends Component
         $post = Post::find($id);
         return view('posts.video', ['video' => $post]);
     }
-
 
     /**
      * The attributes that are mass assignable.

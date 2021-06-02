@@ -6,11 +6,12 @@ use Illuminate\Http\Request;
 use Livewire\Component;
 use App\Models\Post;
 use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\DB;
 
 class Create extends Component
 {
     use WithFileUploads;
-    public $posts, $title, $body, $post_id, $url, $video;
+    public $posts, $title, $body, $post_id, $url, $video, $name;
     public $isOpen = 0;
 
     /**
@@ -101,8 +102,12 @@ class Create extends Component
      */
 
     public function show($id) {
-        $post = Post::find($id);
-        return view('posts.video', ['video' => $post]);
+        $videos = DB::table('posts')
+            ->where('id', $id)
+            ->get();
+        $profilePicture = DB::table('users')
+            ->get();
+        return view('posts.video',compact('videos','profilePicture'));
     }
 
 

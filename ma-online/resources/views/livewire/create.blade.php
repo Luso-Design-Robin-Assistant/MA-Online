@@ -5,7 +5,7 @@
         </h2>
         <div class="relative text-gray-600">
             <div class="ls-searchbar">
-                <input class="border-1 text-white border-green-200 border-3 bg-gray-800 py-3 items-center px-5 pr-16 rounded-full text-sm focus:outline-none "
+                <input class=" text-white   bg-gray-800 py-3 items-center px-5 pr-16 rounded-full text-sm focus:outline-none "
                     type="search" name="search">
                 <button type="submit" class="absolute right-0 top-0 mt-4 mr-4">
                     <svg class="fill-green-200 text-green-200 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
@@ -32,26 +32,26 @@
     @csrf
     <div class="ld-left w-5/12 mr-8 flex flex-col justify-between">
         <div class="mb-10">
-            <input type="file" class="w-full bg-white border-green-200 border-6 shadow cursor-pointer appearance-none py-3 px-3 leading-tight focus:outline-none focus:shadow-outline" style="height: 55vh" id="exampleFormControlInput1" wire:model="video">
+            <input type="file" class="w-full bg-white shadow cursor-pointer appearance-none py-3 px-3 leading-tight focus:outline-none focus:shadow-outline" style="height: 55vh" id="exampleFormControlInput1" wire:model="video">
             @error('body') <span class="text-red-500">{{ $message }}</span>@enderror
         </div>
         <div>
-            <input type="text" name="url" class="border-yellow border-6 shadow appearance-none text-black w-full py-4 px-3 placeholder-black::placeholder leading-tight focus:outline-none focus:shadow-outline" id="url" placeholder="VIDEO URL: Hier komt de link vanaf een ander platform" wire:model="url">
+            <input type="text" name="url" class=" shadow appearance-none text-black w-full py-4 px-3 placeholder-black::placeholder leading-tight focus:outline-none focus:shadow-outline" id="url" placeholder="VIDEO URL: Hier komt de link vanaf een ander platform" wire:model="url">
             @error('url') <span class="text-red-500">{{ $message }}</span>@enderror
         </div>
     </div>
     <div class="ld-center w-4/12 mr-8 flex flex-col">
         <div class="mb-10">
-            <input type="text" class="border-green-200 border-6	shadow appearance-none text-black w-full py-4 px-3 placeholder-black::placeholder leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="TITEL" wire:model="title">
+            <input type="text" class="	shadow appearance-none text-black w-full py-4 px-3 placeholder-black::placeholder leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="TITEL" wire:model="title">
             @error('title') <span class="text-red-500">{{ $message }}</span>@enderror
         </div>
         <div class="mb-10">
-            <textarea class="border-yellow border-6 w-full h-56 shadow appearance-none text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput2" wire:model="body" placeholder="BESCHRIJVING"></textarea>
+            <textarea class=" w-full h-56 shadow appearance-none text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput2" wire:model="body" placeholder="BESCHRIJVING"></textarea>
             @error('body') <span class="text-red-500">{{ $message }}</span>@enderror
         </div>
         <div>
             <div class="relative inline-flex w-full">
-                <select class="border-green-200 border-6 shadow appearance-none cursor-pointer text-black w-full py-4 px-3 placeholder-black::placeholder leading-tight focus:outline-none focus:shadow-outline">
+                <select class=" shadow appearance-none cursor-pointer text-black w-full py-4 px-3 placeholder-black::placeholder leading-tight focus:outline-none focus:shadow-outline">
                     <option>TAGS</option>
                     <option>tag 1</option>
                     <option>tag 2</option>
@@ -62,7 +62,7 @@
     </div>
     <div class="ld-right w-3/12 h-full flex flex-col justify-between">
         <div class="mb-10">
-            <input type="file" class="border-green-200 bg-white border-6 shadow cursor-pointer appearance-none w-full py-3 px-3 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1">
+            <input type="file" class=" bg-white shadow cursor-pointer appearance-none w-full py-3 px-3 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1">
             @error('body') <span class="text-red-500">{{ $message }}</span>@enderror
         </div>
         <div class="flex self-end">

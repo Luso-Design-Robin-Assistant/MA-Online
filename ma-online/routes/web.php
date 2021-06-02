@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Posts;
 use App\Http\Livewire\Create;
-// use App\Http\Livewire\ShowProfile;
+ use App\Http\Livewire\ShowProfile;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -39,3 +39,4 @@ Route::get('post', Posts::class)->name('post');
 Route::get('create', Create::class)->name('create');
 Route::post('/store', [Create::class, 'store'])->name('store');
 Route::get('/units/{id}', [Create::class, 'show'])->name('video');
+Route::get('/units/{id}', Posts::class)->name('video');
