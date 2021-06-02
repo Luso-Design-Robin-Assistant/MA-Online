@@ -13,10 +13,10 @@
         <div class="ls-forms w-full	 h-full items-center ">
             <span class="text-3xl md:text-5xl uppercase  text-pink" >Inloggen</span>
             <div>
-                <x-jet-input id="email" placeholder="Email:" style="background:transparent; color: white; border:none; border-bottom: 2px solid white; " class="mt-16 block mt-3 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                <x-jet-input id="email" placeholder="Email:" style="background:transparent; color: white; border:none; border-bottom: 2px solid white; " class="mt-16 block w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
             <div class="mt-4">
-                <x-jet-input id="password" placeholder="Wachtwoord:" style="background:transparent; color: white; border:none; border-bottom: 2px solid white; " class="mt-12 block mt-3 w-full " type="password" name="password" required autocomplete="current-password" />
+                <x-jet-input id="password" placeholder="Wachtwoord:" style="background:transparent; color: white; border:none; border-bottom: 2px solid white; " class="mt-12 block w-full " type="password" name="password" required autocomplete="current-password" />
             </div>
             <x-jet-button class="mt-12 text-center">
                     {{ __('Inloggen') }}
