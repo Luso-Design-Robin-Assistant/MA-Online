@@ -24,11 +24,11 @@
 
 
     <div class="container my-3 mx-auto">
-        <div class="flex flex-row justify-between">
-            <video width="800" height="auto" controls>
+        <div class="flex flex-col md:flex-row md:justify-between">
+            <video width="800" height="auto" controls class="pb-5 md:pb-0">
                 <source src="/storage/{{$video->video}}" type="video/mp4">
             </video>
-            <div class="ls-comment bg-white mr-9 px-8 p-2.5 h-24 w-2/6 max-w-2xl	shadow-md ml-5 flex items-center flex-row">
+            <div class="ls-comment bg-white md:mr-9 md:px-8 px-4 p-2.5 h-20 md:h-24 md:w-2/6 w-5/6 m-auto shadow-md md:ml-5 flex items-center flex-row">
                 @foreach($profilePicture as $pfp)
                     <img class="rounded-full min-h-full" src="{{ Auth::user()->profile_photo_url }}" alt="Profile foto">
                 @endforeach
