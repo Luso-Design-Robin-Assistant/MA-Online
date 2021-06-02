@@ -107,7 +107,8 @@ class Create extends Component
             ->get();
         $profilePicture = DB::table('users')
             ->get();
-        return view('posts.video',compact('videos','profilePicture'));
+        $units = Post::orderBy('created_at','desc')->take(3)->get();
+        return view('posts.video',compact('videos','profilePicture', 'units'));
     }
 
 

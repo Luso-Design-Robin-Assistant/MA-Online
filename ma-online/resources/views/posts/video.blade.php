@@ -22,28 +22,41 @@
             </div>
         </x-slot>
 
-    <div class="container mx-auto">
-        <video width="800" height="auto" controls>
-            <source src="/storage/{{$video->video}}" type="video/mp4">
-        </video>
+
+    <div class="container my-3 mx-auto">
+        <div class="flex flex-row justify-between">
+            <video width="800" height="auto" controls>
+                <source src="/storage/{{$video->video}}" type="video/mp4">
+            </video>
+            <div class="ls-comment bg-white mr-9 px-8 p-2.5 h-24 w-2/6 max-w-2xl	shadow-md ml-5 flex items-center flex-row">
+                @foreach($profilePicture as $pfp)
+                    <img class="rounded-full min-h-full" src="{{ Auth::user()->profile_photo_url }}" alt="Profile foto">
+                @endforeach
+                <div class="relative w-full">
+                    <input class="ml-4 w-5/6 text-black border-0 py-3 items-center px-5 text-sm focus:outline-none" placeholder="Plaats hier een comment"
+                        type="search" name="search">
+                    <button type="submit" class="absolute right-0 -top-5 mt-4 mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="46" viewBox="0 0 53.667 46">
+                            <path id="Icon_material-send" data-name="Icon material-send" d="M3.026,50.5l53.642-23L3.026,4.5,3,22.389,41.334,27.5,3,32.611Z" transform="translate(-3 -4.5)" fill="#211f20"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
         <h2 class="font-semibold uppercase text-2xl py-8 text-white leading-tight">
             {{ __('vergelijkbare videos') }}
         </h2>
         <div class="ls-relatable flex flex-row">
-            <video width="250" height="auto" >
-                <source src="/storage/{{$video->video}}" type="video/mp4">
-            </video>
-            <video width="250" class="mx-7" height="auto" >
-                <source src="/storage/{{$video->video}}" type="video/mp4">
-            </video>
-            <video width="250" height="auto" >
-                <source src="/storage/{{$video->video}}" type="video/mp4">
-            </video>
+            @foreach($units as $unit)
+            <a href="{{ route('video', ['id' => $unit->id]) }}">
+                <video width="250" height="auto" >
+                    <source src="/storage/{{$unit->video}}" type="video/mp4">
+                </video>
+            </a>
+            @endforeach
         </div>
     </div>
 
 @endforeach
-        @foreach($profilePicture as $pfp)
-            <p>{{ $pfp->name }}</p>
-        @endforeach
+
 </x-app-layout>

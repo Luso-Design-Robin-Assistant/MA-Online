@@ -80,3 +80,7 @@
     transition: height .4s ease;
     transition: all 0.3s ease;
 }
+
+.ls-relatable a:nth-child(2) {
+    margin: 0 23px;
+}
