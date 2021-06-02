@@ -1,6 +1,8 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Twee Staps Verificatie') }}
+        <h1 class="font-helvetica-bld tracking-wider text-3xl">
+            {{ __('Twee Staps Verificatie') }}
+        </h1>
     </x-slot>
 
     <x-slot name="content">

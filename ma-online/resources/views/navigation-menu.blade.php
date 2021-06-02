@@ -3,12 +3,12 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-24">
+        <div class="flex justify-between font-helvetica-bld tracking-wider h-24">
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <img class="ls-logo w-20" src="{{ url('/images/logo.png') }}" alt="logo-placeholder">
+                        <img class="ls-logo w-20" src="{{ url('/images/Logo.png') }}" alt="logo-placeholder">
                     </a>
                 </div>
                 <!-- Navigation Links -->

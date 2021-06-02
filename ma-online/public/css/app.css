@@ -6043,16 +6043,28 @@ select {
   clear: none;
 }
 
+.font-helvetica-bld {
+  font-family: Helvetica-Neue-Bld;
+}
+
+.font-helvetica-med {
+  font-family: Helvetica-Neue-Med;
+}
+
+.font-helvetica-med-it {
+  font-family: Helvetica-Neue-Med-It;
+}
+
+.font-helvetica-rom {
+  font-family: Helvetica-Neue-Rom;
+}
+
+.font-rock-salt {
+  font-family: Rock-Salt;
+}
+
 .font-sans {
   font-family: Roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-.font-serif {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
-.font-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .font-thin {
@@ -21049,7 +21061,57 @@ select {
 *
 */
 
-/* 1. Navbar styling */
+/* 1. Fonts */
+
+@font-face {
+  font-family: 'Helvetica-Neue-Bld';
+
+  src: url('/storage/fonts/HelveticaNeueLTStd-Bd.woff') format('woff');
+
+  font-style: normal;
+
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica-Neue-Med';
+
+  src: url('/storage/fonts/HelveticaNeueLTStd-Md.woff') format('woff');
+
+  font-style: normal;
+
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica-Neue-Med-It';
+
+  src: url('/storage/fonts/HelveticaNeueLTStd-MdIt.woff') format('woff');
+
+  font-style: normal;
+
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica-Neue-Rom';
+
+  src: url('/storage/fonts/HelveticaNeueLTStd-Roman.woff') format('woff');
+
+  font-style: normal;
+
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Rock-Salt';
+
+  src: url('/storage/fonts/RockSalt-Regular.woff') format('woff');
+
+  font-style: normal;
+
+  font-weight: normal;
+}
 
 /* 2. Carousel styling */
 
@@ -26422,16 +26484,28 @@ select {
     clear: none;
   }
 
+  .sm\:font-helvetica-bld {
+    font-family: Helvetica-Neue-Bld;
+  }
+
+  .sm\:font-helvetica-med {
+    font-family: Helvetica-Neue-Med;
+  }
+
+  .sm\:font-helvetica-med-it {
+    font-family: Helvetica-Neue-Med-It;
+  }
+
+  .sm\:font-helvetica-rom {
+    font-family: Helvetica-Neue-Rom;
+  }
+
+  .sm\:font-rock-salt {
+    font-family: Rock-Salt;
+  }
+
   .sm\:font-sans {
     font-family: Roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  }
-
-  .sm\:font-serif {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  }
-
-  .sm\:font-mono {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .sm\:font-thin {
@@ -46544,16 +46618,28 @@ select {
     clear: none;
   }
 
+  .md\:font-helvetica-bld {
+    font-family: Helvetica-Neue-Bld;
+  }
+
+  .md\:font-helvetica-med {
+    font-family: Helvetica-Neue-Med;
+  }
+
+  .md\:font-helvetica-med-it {
+    font-family: Helvetica-Neue-Med-It;
+  }
+
+  .md\:font-helvetica-rom {
+    font-family: Helvetica-Neue-Rom;
+  }
+
+  .md\:font-rock-salt {
+    font-family: Rock-Salt;
+  }
+
   .md\:font-sans {
     font-family: Roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  }
-
-  .md\:font-serif {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  }
-
-  .md\:font-mono {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .md\:font-thin {
@@ -66666,16 +66752,28 @@ select {
     clear: none;
   }
 
+  .lg\:font-helvetica-bld {
+    font-family: Helvetica-Neue-Bld;
+  }
+
+  .lg\:font-helvetica-med {
+    font-family: Helvetica-Neue-Med;
+  }
+
+  .lg\:font-helvetica-med-it {
+    font-family: Helvetica-Neue-Med-It;
+  }
+
+  .lg\:font-helvetica-rom {
+    font-family: Helvetica-Neue-Rom;
+  }
+
+  .lg\:font-rock-salt {
+    font-family: Rock-Salt;
+  }
+
   .lg\:font-sans {
     font-family: Roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  }
-
-  .lg\:font-serif {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  }
-
-  .lg\:font-mono {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .lg\:font-thin {
@@ -86788,16 +86886,28 @@ select {
     clear: none;
   }
 
+  .xl\:font-helvetica-bld {
+    font-family: Helvetica-Neue-Bld;
+  }
+
+  .xl\:font-helvetica-med {
+    font-family: Helvetica-Neue-Med;
+  }
+
+  .xl\:font-helvetica-med-it {
+    font-family: Helvetica-Neue-Med-It;
+  }
+
+  .xl\:font-helvetica-rom {
+    font-family: Helvetica-Neue-Rom;
+  }
+
+  .xl\:font-rock-salt {
+    font-family: Rock-Salt;
+  }
+
   .xl\:font-sans {
     font-family: Roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  }
-
-  .xl\:font-serif {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  }
-
-  .xl\:font-mono {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .xl\:font-thin {
@@ -106910,16 +107020,28 @@ select {
     clear: none;
   }
 
+  .\32xl\:font-helvetica-bld {
+    font-family: Helvetica-Neue-Bld;
+  }
+
+  .\32xl\:font-helvetica-med {
+    font-family: Helvetica-Neue-Med;
+  }
+
+  .\32xl\:font-helvetica-med-it {
+    font-family: Helvetica-Neue-Med-It;
+  }
+
+  .\32xl\:font-helvetica-rom {
+    font-family: Helvetica-Neue-Rom;
+  }
+
+  .\32xl\:font-rock-salt {
+    font-family: Rock-Salt;
+  }
+
   .\32xl\:font-sans {
     font-family: Roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  }
-
-  .\32xl\:font-serif {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  }
-
-  .\32xl\:font-mono {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .\32xl\:font-thin {

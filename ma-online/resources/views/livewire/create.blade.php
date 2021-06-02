@@ -1,8 +1,13 @@
 <x-slot name="header">
     <div class="flex flex-row justify-between">
-        <h2 class="font-semibold uppercase text-4xl text-pink leading-tight">
-            {{ __('Uploaden') }}
-        </h2>
+        <div class="flex flex-col relative">
+            <h2 class="font-rock-salt uppercase text-4xl py-5 md:py-0 text-white leading-tight z-10">
+                {{ __('Uploaden') }}
+            </h2>
+            <h2 class="font-rock-salt uppercase text-4xl py-5 md:py-0 text-pink leading-tight absolute top-0.5 left-0.5">
+                {{ __('Uploaden') }}
+            </h2>
+        </div>
         <div class="relative text-gray-600">
             <div class="ls-searchbar">
                 <input class="border-1 text-white border-green-200 border-3 bg-gray-800 py-3 items-center px-5 pr-16 rounded-full text-sm focus:outline-none "
@@ -32,26 +37,26 @@
     @csrf
     <div class="ld-left md:w-5/12 w-full mr-8 flex flex-col justify-between">
         <div class="mb-10">
-            <input type="file" class="w-full bg-white shadow cursor-pointer appearance-none py-3 px-3 leading-tight focus:outline-none focus:shadow-outline" style="height: 55vh" id="exampleFormControlInput1" wire:model="video">
+            <input type="file" class="w-full bg-white shadow cursor-pointer font-helvetica-bld tracking-wider appearance-none py-3 px-3 leading-tight focus:outline-none focus:shadow-outline" style="height: 55vh" id="exampleFormControlInput1" wire:model="video">
             @error('body') <span class="text-red-500">{{ $message }}</span>@enderror
         </div>
         <div>
-            <input type="text" name="url" class=" shadow appearance-none text-black w-full py-4 px-3 placeholder-black::placeholder leading-tight focus:outline-none focus:shadow-outline" id="url" placeholder="VIDEO URL: Hier komt de link vanaf een ander platform" wire:model="url">
+            <input type="text" name="url" class=" shadow appearance-none text-black font-helvetica-bld tracking-wider w-full py-4 px-3 placeholder-black::placeholder leading-tight focus:outline-none focus:shadow-outline" id="url" placeholder="VIDEO URL: Hier komt de link vanaf een ander platform" wire:model="url">
             @error('url') <span class="text-red-500">{{ $message }}</span>@enderror
         </div>
     </div>
     <div class="ld-center py-10 md:py-0 md:w-4/12 w-full mr-8 flex flex-col">
         <div class="mb-10">
-            <input type="text" class="	shadow appearance-none text-black w-full py-4 px-3 placeholder-black::placeholder leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="TITEL" wire:model="title">
+            <input type="text" class="	shadow appearance-none text-black font-helvetica-bld tracking-wider w-full py-4 px-3 placeholder-black::placeholder leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="TITEL" wire:model="title">
             @error('title') <span class="text-red-500">{{ $message }}</span>@enderror
         </div>
         <div class="mb-10">
-            <textarea class=" w-full h-56 shadow appearance-none text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput2" wire:model="body" placeholder="BESCHRIJVING"></textarea>
+            <textarea class=" w-full h-56 shadow appearance-none text-black font-helvetica-bld tracking-wider py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput2" wire:model="body" placeholder="BESCHRIJVING"></textarea>
             @error('body') <span class="text-red-500">{{ $message }}</span>@enderror
         </div>
         <div>
             <div class="relative inline-flex w-full">
-                <select class=" shadow appearance-none cursor-pointer text-black w-full py-4 px-3 placeholder-black::placeholder leading-tight focus:outline-none focus:shadow-outline">
+                <select class=" shadow appearance-none cursor-pointer text-black font-helvetica-bld tracking-wider w-full py-4 px-3 placeholder-black::placeholder leading-tight focus:outline-none focus:shadow-outline">
                     <option>TAGS</option>
                     <option>tag 1</option>
                     <option>tag 2</option>
@@ -62,11 +67,11 @@
     </div>
     <div class="ld-right md:w-3/12 w-full h-full flex flex-col justify-between">
         <div class="mb-10">
-            <input type="file" class=" bg-white shadow cursor-pointer appearance-none w-full py-3 px-3 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1">
+            <input type="file" class=" bg-white shadow font-helvetica-bld tracking-wider cursor-pointer appearance-none w-full py-3 px-3 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1">
             @error('body') <span class="text-red-500">{{ $message }}</span>@enderror
         </div>
         <div class="flex self-end">
-            <button wire:click.prevent="store()" type="button" class="inline-flex bg-green-200 justify-center rounded-full font-bold px-12 py-4 text-xl uppercase text-white">
+            <button wire:click.prevent="store()" type="button" class="inline-flex bg-green-200 justify-center rounded-full font-bold px-12 py-4 text-xl font-helvetica-bld tracking-wider leading-relaxed uppercase text-white">
                 Uploaden
             </button>
         </div>

@@ -77,6 +77,13 @@ module.exports = {
             '10': '10px',
             '12': '12px',
         },
+        fontFamily: {
+            'helvetica-bld': 'Helvetica-Neue-Bld',
+            'helvetica-med': 'Helvetica-Neue-Med',
+            'helvetica-med-it': 'Helvetica-Neue-Med-It',
+            'helvetica-rom': 'Helvetica-Neue-Rom',
+            'rock-salt': 'Rock-Salt',
+        },
     },
 
     variants: {

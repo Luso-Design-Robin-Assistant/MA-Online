@@ -1,6 +1,8 @@
 <x-jet-form-section submit="updatePassword">
     <x-slot name="title">
-        {{ __('Update Wachtwoord') }}
+        <h1 class="font-helvetica-bld tracking-wider text-3xl">
+            {{ __('Update Wachtwoord') }}
+        </h1>
     </x-slot>
 
     <x-slot name="form">

@@ -1,9 +1,14 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex flex-row justify-between">
-            <h2 class="font-semibold uppercase text-4xl text-pink leading-tight">
-                {{ __('Profiel aanpassen') }}
-            </h2>
+            <div class="flex flex-col relative">
+                <h2 class="font-rock-salt uppercase text-4xl text-white leading-tight z-10">
+                    {{ __('Profiel aanpassen') }}
+                </h2>
+                <h2 class="font-rock-salt uppercase text-4xl text-pink leading-tight absolute top-0.5 left-0.5 w-full">
+                    {{ __('Profiel aanpassen') }}
+                </h2>
+            </div>
 
             <div class="relative text-gray-600">
                 <div class="ls-searchbar">

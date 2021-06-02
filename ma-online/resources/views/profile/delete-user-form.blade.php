@@ -1,6 +1,8 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Verwijder Account') }}
+        <h1 class="font-helvetica-bld tracking-wider text-3xl">
+            {{ __('Verwijder Account') }}
+        </h1>
     </x-slot>
 
     <x-slot name="description">

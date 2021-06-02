@@ -12,9 +12,14 @@
 {{--    Newest    --}}
             <x-slot name="header">
                 <div class="md:flex-row items-center md:items-baseline flex flex-col-reverse justify-between">
-                    <h2 class="font-semibold uppercase text-4xl py-5 md:py-0 text-pink leading-tight">
-                        {{ __('Dashboard') }}
-                    </h2>
+                    <div class="flex flex-col relative">
+                        <h2 class="font-rock-salt uppercase text-4xl py-5 md:py-0 text-white leading-tight z-10">
+                            {{ __('Dashboard') }}
+                        </h2>
+                        <h2 class="font-rock-salt uppercase text-4xl py-5 md:py-0 text-pink leading-tight absolute top-0.5 left-0.5">
+                            {{ __('Dashboard') }}
+                        </h2>
+                    </div>
                     <div class="relative text-gray-600">
                         <div class="ls-searchbar">
                             <input class="border-1 text-white border-green-200 border-3 bg-gray-800 py-3 items-center px-5 pr-16 rounded-full text-sm focus:outline-none "
@@ -31,7 +36,7 @@
                     </div>
                 </div>
             </x-slot>
-            <h2 class="font-semibold uppercase text-2xl  text-center py-5 md:py-0 text-white leading-tight">
+            <h2 class="font-helvetica-bld tracking-wider uppercase text-2xl  text-center py-5 md:py-0 text-white leading-tight">
                 {{ __('Recent geupload') }}
             </h2>
         <div class="gallery my-16 js-flickity" data-flickity-options='{ "freeScroll": false, "prevNextButtons": false,"wrapAround": true }'>
@@ -43,16 +48,16 @@
                     <a href="{{ route('video', ['id' => $post->id]) }}">
                     <div class="ls-bar flex-row justify-between flex ">
                         <div class="ls-text">
-                            <p class="px-4 py-2 items-center text-black flex font-semibold	">{{ $post->title }}</p>
-                            <p class="px-4 py-2 items-center text-black flex w-10/12">{{ $post->body }}</p>
-                            <p class="px-4 py-2 items-center text-black flex font-bold">{{ date('d-m-Y', strtotime($post->created_at)) }}</p>
+                            <p class="px-4 py-2 items-center text-black flex font-helvetica-bld">{{ $post->title }}</p>
+                            <p class="px-4 py-2 items-center text-black flex w-10/12 font-helvetica-rom">{{ $post->body }}</p>
+                            <p class="px-4 py-2 items-center text-black flex font-helvetica-med">{{ date('d-m-Y', strtotime($post->created_at)) }}</p>
                         </div>
                     </div>
                     </a>
                 </div>
             @endforeach
         </div>
-            <h2 class="font-semibold uppercase text-2xl text-center py-5 md:py-0 text-white leading-tight">
+            <h2 class="font-helvetica-bld tracking-wider uppercase text-2xl text-center py-5 md:py-0 text-white leading-tight">
                 {{ __('Populaire units') }}
             </h2>
             <div class="gallery my-16 js-flickity" data-flickity-options='{ "freeScroll": false, "prevNextButtons": false,"wrapAround": true }'>
@@ -80,9 +85,9 @@
                         <a href="{{ route('video', ['id' => $post->id]) }}">
                             <div class="ls-bar flex-row justify-between flex ">
                                 <div class="ls-text">
-                                    <p class="px-4 py-2 items-center text-black flex font-semibold	">{{ $post->title }}</p>
-                                    <p class="px-4 py-2 items-center text-black flex w-10/12">{{ $post->body }}</p>
-                                    <p class="px-4 py-2 items-center text-black flex font-bold">{{ date('d-m-Y', strtotime($post->created_at)) }}</p>
+                                    <p class="px-4 py-2 items-center text-black flex font-helvetica-bld">{{ $post->title }}</p>
+                                    <p class="px-4 py-2 items-center text-black flex w-10/12 font-helvetica-rom">{{ $post->body }}</p>
+                                    <p class="px-4 py-2 items-center text-black flex font-helvetica-med">{{ date('d-m-Y', strtotime($post->created_at)) }}</p>
                                 </div>
                             </div>
                         </a>

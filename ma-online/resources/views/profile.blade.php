@@ -1,10 +1,15 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex flex-row justify-between">
-
-                <h2 class="font-semibold uppercase text-4xl text-pink leading-tight">
+            
+            <div class="flex flex-col relative">
+                <h2 class="font-rock-salt uppercase text-4xl text-white leading-tight z-10">
                     {{ __('Profiel') }}
                 </h2>
+                <h2 class="font-rock-salt uppercase text-4xl text-pink leading-tight absolute top-0.5 left-0.5">
+                    {{ __('Profiel') }}
+                </h2>
+            </div>
 
             <div class="relative text-gray-600">
                 <div class="ls-searchbar">
@@ -41,15 +46,15 @@
                         </div>
                     </div>
                     <div class="flex flex-1 flex-col justify-center text-gray-800 px-6">
-                        <h3 class="text-2xl font-bold">{{ $user }}</h3>
-                        <p class="w-2/3">
+                        <h3 class="text-2xl font-helvetica-bld tracking-wider">{{ $user }}</h3>
+                        <p class="w-2/3 font-helvetica-rom">
                             Dit is een voorbeeldtekst. Hier komt informatie over het persoon
                         </p>
                     </div>
                 </div>
                 <div class="w-full mx-auto py-6">
                 </div>
-                <div class="flex flex-col font-bold uppercase items-center w-full py-6 text-2xl text-green-200">
+                <div class="flex flex-col font-helvetica-bld tracking-wider uppercase items-center w-full py-6 text-2xl text-green-200">
                     <a href="/uploads" class="py-2">
                         {{ __('Mijn uploads') }}
                     </a>
