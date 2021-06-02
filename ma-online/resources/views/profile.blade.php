@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex flex-row justify-between">
-            
+
                 <h2 class="font-semibold uppercase text-4xl text-pink leading-tight">
                     {{ __('Profiel') }}
                 </h2>
@@ -33,32 +33,32 @@
 
     <div>
         <div class="container mx-auto py-10 px-4 sm:px-6 lg:px-8">
-            <div class="mx-auto bg-gray-800 border-green-200 border-10 border-solid flex flex-col sm:w-full lg:w-4/5 xl:w-3/5">
+            <div class="mx-auto py-20 bg-white flex flex-col sm:w-full lg:w-4/5 xl:w-3/5">
                 <div class="w-full flex flex-row py-6">
-                    <div class="flex flex-1 justify-end px-6">  
+                    <div class="flex flex-1 justify-end px-6">
                         <div class="w-40 h-40">
-                            <img class="rounded-full min-h-full" src="{{ Auth::user()->profile_photo_url }}" alt="Profile foto">
+                            <img class="rounded-full border-green-200 border-4 border-solid min-h-full" src="{{ Auth::user()->profile_photo_url }}" alt="Profile foto">
                         </div>
                     </div>
-                    <div class="flex flex-1 flex-col justify-center text-green-100 px-6">
-                        <h3 class="text-2xl">{{ $user }}</h3>
+                    <div class="flex flex-1 flex-col justify-center text-gray-800 px-6">
+                        <h3 class="text-2xl font-bold">{{ $user }}</h3>
                         <p class="w-2/3">
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                            Dit is een voorbeeldtekst. Hier komt informatie over het persoon
                         </p>
                     </div>
                 </div>
                 <div class="w-full mx-auto py-6">
                 </div>
-                <div class="flex flex-col items-center w-full py-6 text-yellow">
-                    <x-jet-yellow-button type="button" class="w-72" wire:click=""> 
+                <div class="flex flex-col font-bold uppercase items-center w-full py-6 text-2xl text-green-200">
+                    <a href="/uploads" class="py-2">
                         {{ __('Mijn uploads') }}
-                    </x-jet-yellow-button>
-                    <x-jet-yellow-button type="button" class="w-72" wire:click=""> 
+                    </a>
+                    <a href="/favorites" class="py-2">
                         {{ __('Mijn favorieten') }}
-                    </x-jet-yellow-button>
-                    <x-jet-yellow-button type="button" class="w-72" wire:click="profileEdit"> 
+                    </a>
+                    <a href="/profile/{{ Auth::user()->name }}/edit" class="py-2">
                         {{ __('Profiel aanpassen') }}
-                    </x-jet-yellow-button>
+                    </a>
                 </div>
             </div>
         </div>
