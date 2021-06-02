@@ -5,7 +5,7 @@
         </h2>
         <div class="relative text-gray-600">
             <div class="ls-searchbar">
-                <input class=" text-white   bg-gray-800 py-3 items-center px-5 pr-16 rounded-full text-sm focus:outline-none "
+                <input class="border-1 text-white border-green-200 border-3 bg-gray-800 py-3 items-center px-5 pr-16 rounded-full text-sm focus:outline-none "
                     type="search" name="search">
                 <button type="submit" class="absolute right-0 top-0 mt-4 mr-4">
                     <svg class="fill-green-200 text-green-200 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
@@ -28,9 +28,9 @@
     </div>
 </x-slot>
 
-<form class="bg-gray-800 container h-screen mx-auto py-16 sm:px-6 lg:px-8 flex flex-row justify-around" style="height: calc(100vh - 189px)" action="{{ route('store') }}" method="POST" enctype="multipart/form-data">
+<form class="ls-create bg-gray-800 container mx-auto py-16 sm:px-6 lg:px-8 flex flex-col md:flex-row md:justify-around"  action="{{ route('store') }}" method="POST" enctype="multipart/form-data">
     @csrf
-    <div class="ld-left w-5/12 mr-8 flex flex-col justify-between">
+    <div class="ld-left md:w-5/12 w-full mr-8 flex flex-col justify-between">
         <div class="mb-10">
             <input type="file" class="w-full bg-white shadow cursor-pointer appearance-none py-3 px-3 leading-tight focus:outline-none focus:shadow-outline" style="height: 55vh" id="exampleFormControlInput1" wire:model="video">
             @error('body') <span class="text-red-500">{{ $message }}</span>@enderror
@@ -40,7 +40,7 @@
             @error('url') <span class="text-red-500">{{ $message }}</span>@enderror
         </div>
     </div>
-    <div class="ld-center w-4/12 mr-8 flex flex-col">
+    <div class="ld-center py-10 md:py-0 md:w-4/12 w-full mr-8 flex flex-col">
         <div class="mb-10">
             <input type="text" class="	shadow appearance-none text-black w-full py-4 px-3 placeholder-black::placeholder leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="TITEL" wire:model="title">
             @error('title') <span class="text-red-500">{{ $message }}</span>@enderror
@@ -60,7 +60,7 @@
             </div>
         </div>
     </div>
-    <div class="ld-right w-3/12 h-full flex flex-col justify-between">
+    <div class="ld-right md:w-3/12 w-full h-full flex flex-col justify-between">
         <div class="mb-10">
             <input type="file" class=" bg-white shadow cursor-pointer appearance-none w-full py-3 px-3 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1">
             @error('body') <span class="text-red-500">{{ $message }}</span>@enderror

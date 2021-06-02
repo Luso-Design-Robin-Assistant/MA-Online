@@ -76,11 +76,18 @@
 .ld-menu1 {
     list-style: none;
     clear: both;
-    height: 0px;
-    transition: height .4s ease;
+    height: 0;
     transition: all 0.3s ease;
 }
 
 .ls-relatable a:nth-child(2) {
     margin: 0 23px;
+}
+  .ls-create {
+    height: 100%;
+}
+@media only screen and (min-width: 767px) {
+    .ls-create {
+        height: calc(100vh - 189px);
+    }
 }
