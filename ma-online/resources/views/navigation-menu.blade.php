@@ -38,7 +38,7 @@
                     <div class="ld-bottom ld-hamburger2 bg-white relative mt-ham"></div>
                 </label>
                 <nav class="ld-menu1 w-auto flex flex-col text-white text-2xl text-center absolute top-28 right-0 z-50 overflow-hidden py-24 px-20">
-                    <div class="w-full bold h-full bg-white bg-opacity-10 backdrop-filter backdrop-blur-2xl absolute top-0 left-0 z-0"></div>
+                    <div class="w-full bold h-full bg-gray-800 absolute top-0 left-0 z-0"></div>
                     <a href="/" class="ld-link1 py-8 z-10">
                         {{ __('Informatie Pagina') }}
                     </a>

@@ -22,21 +22,21 @@
                     </div>
                     <div class="relative text-gray-600">
                         <div class="ls-searchbar">
-                            <input class="border-1 text-white border-green-200 border-3 bg-gray-800 py-3 items-center px-5 pr-16 rounded-full text-sm focus:outline-none "
+                            <input class="border-1 text-white border-green-200 border-3 bg-gray-800 py-3 items-center px-5 pr-5 sm:pr-16 rounded-full text-sm focus:outline-none "
                                 type="search" name="search">
                             <button type="submit" class="absolute right-0 top-0 mt-4 mr-4">
                                 <svg class="fill-green-200 text-green-200 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
                                     viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"
                                     width="512px" height="512px">
-                            <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
-                        </svg>
+                        <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+                    </svg>
                             </button>
                         </div>
                     </div>
                 </div>
             </x-slot>
-            <h2 class="font-helvetica-bld tracking-wider uppercase text-2xl  text-center py-5 md:py-0 text-white leading-tight">
+            <h2 class="font-helvetica-bld tracking-wider uppercase text-2xl text-center py-2 sm:py-5 md:py-0 text-white leading-tight">
                 {{ __('Recent geupload') }}
             </h2>
         <div class="gallery my-16 js-flickity" data-flickity-options='{ "freeScroll": false, "prevNextButtons": false,"wrapAround": true }'>
@@ -62,6 +62,7 @@
             </h2>
             <div class="gallery my-16 js-flickity" data-flickity-options='{ "freeScroll": false, "prevNextButtons": false,"wrapAround": true }'>
                 @foreach($posts as $post)
+                    <a href="{{ route('video', ['id' => $post->id]) }}">
                     <div class="flex-col mx-8 w-80 bg-white border-6 hover:border-green-200" style="height: 400px">
                         <div class="ls-img flex items-center mx-auto py-8 justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="162" height="135" viewBox="0 0 162 135">
@@ -82,7 +83,6 @@
                                 </g>
                             </svg>
                         </div>
-                        <a href="{{ route('video', ['id' => $post->id]) }}">
                             <div class="ls-bar flex-row justify-between flex ">
                                 <div class="ls-text">
                                     <p class="px-4 py-2 items-center text-black flex font-helvetica-bld">{{ $post->title }}</p>
@@ -90,8 +90,8 @@
                                     <p class="px-4 py-2 items-center text-black flex font-helvetica-med">{{ date('d-m-Y', strtotime($post->created_at)) }}</p>
                                 </div>
                             </div>
-                        </a>
                     </div>
+                    </a>
                 @endforeach
             </div>
     </div>

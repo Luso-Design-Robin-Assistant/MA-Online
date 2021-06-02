@@ -1,16 +1,16 @@
 <x-slot name="header">
     <div class="flex flex-row justify-between">
         <div class="flex flex-col relative">
-            <h2 class="font-rock-salt uppercase text-4xl py-5 md:py-0 text-white leading-tight z-10">
+            <h2 class="font-rock-salt uppercase text-2xl sm:text-4xl py-5 md:py-0 text-white leading-tight z-10">
                 {{ __('Uploaden') }}
             </h2>
-            <h2 class="font-rock-salt uppercase text-4xl py-5 md:py-0 text-pink leading-tight absolute top-0.5 left-0.5">
+            <h2 class="font-rock-salt uppercase text-2xl sm:text-4xl py-5 md:py-0 text-pink leading-tight absolute top-0.5 left-0.5">
                 {{ __('Uploaden') }}
             </h2>
         </div>
         <div class="relative text-gray-600">
             <div class="ls-searchbar">
-                <input class="border-1 text-white border-green-200 border-3 bg-gray-800 py-3 items-center px-5 pr-16 rounded-full text-sm focus:outline-none "
+                <input class="border-1 text-white border-green-200 border-3 bg-gray-800 py-3 items-center px-5 pr-5 sm:pr-16 rounded-full text-sm focus:outline-none "
                     type="search" name="search">
                 <button type="submit" class="absolute right-0 top-0 mt-4 mr-4">
                     <svg class="fill-green-200 text-green-200 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
@@ -22,18 +22,10 @@
                 </button>
             </div>
         </div>
-        <div class="-mr-2 flex items-center sm:hidden">
-            <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition">
-                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                    <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-        </div>
     </div>
 </x-slot>
 
-<form class="ls-create bg-gray-800 container mx-auto py-16 sm:px-6 lg:px-8 flex flex-col md:flex-row md:justify-around"  action="{{ route('store') }}" method="POST" enctype="multipart/form-data">
+<form class="ls-create w-11/12 sm:w-full bg-gray-800 container mx-auto py-16 sm:px-6 lg:px-8 flex flex-col md:flex-row md:justify-around"  action="{{ route('store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="ld-left md:w-5/12 w-full mr-8 flex flex-col justify-between">
         <div class="mb-10">

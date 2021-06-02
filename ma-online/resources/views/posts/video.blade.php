@@ -2,9 +2,12 @@
     @foreach($videos as $video)
         <x-slot name="header">
             <div class="md:flex-row items-center md:items-baseline flex flex-col-reverse justify-between">
-                <h2 class="font-semibold uppercase text-4xl py-5 md:py-0 text-pink leading-tight">
-                    {{$video->title}}
-                </h2>
+                <div class="flex flex-col relative">
+                    <h2 class="font-rock-salt uppercase text-2xl sm:text-4xl py-12 md:py-0 text-white leading-tight z-10">
+                        {{$video->title}}
+                    </h2>
+                </div>
+
                 <div class="relative text-gray-600">
                     <div class="ls-searchbar">
                         <input class="border-1 text-white border-green-200 border-3 bg-gray-800 py-3 items-center px-5 pr-16 rounded-full text-sm focus:outline-none "
@@ -23,12 +26,12 @@
         </x-slot>
 
 
-    <div class="container my-3 mx-auto">
-        <div class="flex flex-col md:flex-row md:justify-between">
+    <div class="container mx-auto pb-5">
+        <div class="flex mb-4 flex-col md:flex-row md:justify-between">
             <video width="800" height="auto" controls class="pb-5 md:pb-0">
                 <source src="/storage/{{$video->video}}" type="video/mp4">
             </video>
-            <div class="ls-comment bg-white md:mr-9 md:px-8 px-4 p-2.5 h-20 md:h-24 md:w-2/6 w-5/6 m-auto shadow-md md:ml-5 flex items-center flex-row">
+            <div class="ls-comment bg-white md:mr-9 md:px-8 px-4 p-2.5 h-20 md:h-24 md:w-2/6 ls:w-5/6 w-full m-auto shadow-md md:ml-5 flex items-center flex-row">
                 @foreach($profilePicture as $pfp)
                     <img class="rounded-full min-h-full" src="{{ Auth::user()->profile_photo_url }}" alt="Profile foto">
                 @endforeach
@@ -43,7 +46,7 @@
                 </div>
             </div>
         </div>
-        <h2 class="font-semibold uppercase text-2xl py-8 text-white leading-tight">
+        <h2 class="font-semibold uppercase sm:text-left text-center text-2xl py-8 text-white leading-tight">
             {{ __('vergelijkbare videos') }}
         </h2>
         <div class="ls-relatable flex flex-row">
