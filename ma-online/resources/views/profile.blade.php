@@ -2,10 +2,10 @@
     <x-slot name="header">
         <div class="flex flex-row justify-between items-center">
             <div class="flex flex-col relative">
-                <h2 class="font-rock-salt uppercase text-4xl py-5 md:py-0 text-white leading-tight z-10">
+                <h2 class="font-rock-salt uppercase text-2xl sm:text-4xl py-5 md:py-0 text-white leading-tight z-10">
                     {{ __('Profiel') }}
                 </h2>
-                <h2 class="font-rock-salt uppercase text-4xl py-5 md:py-0 text-pink leading-tight absolute top-0.5 left-0.5">
+                <h2 class="font-rock-salt uppercase text-2xl sm:text-4xl py-5 md:py-0 text-pink leading-tight absolute top-0.5 left-0.5">
                     {{ __('Profiel') }}
                 </h2>
             </div>
