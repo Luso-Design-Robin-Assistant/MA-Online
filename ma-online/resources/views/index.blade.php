@@ -46,8 +46,8 @@
                             <div class="ld-meat bg-black relative mt-ham"></div>
                             <div class="ld-bottom bg-black relative mt-ham"></div>
                         </label>
-                        <nav class="ld-menu1 w-auto flex flex-col text-white text-2xl text-center absolute top-28 right-0 z-50 overflow-hidden py-24 px-20">
-                            <div class="w-full bold h-full bg-white bg-opacity-10 backdrop-filter backdrop-blur-2xl absolute top-0 left-0 z-0"></div>
+                        <nav class="ld-menu1 w-auto flex flex-col text-2xl text-center absolute top-28 right-0 z-50 overflow-hidden py-24 px-20">
+                            <div class="w-full bold h-full bg-white text-black absolute top-0 left-0 z-0"></div>
                             <a class="ld-link1 py-8 z-10" href="#mediacollege">Mediacollege</a>
                             <a class="ld-link1 py-8 z-10" href="#ma-online">Ma online</a>
                             <a class="ld-link1 py-8 z-10" href="#geen-account">Geen account?</a>
