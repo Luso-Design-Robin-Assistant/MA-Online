@@ -40,3 +40,8 @@ Route::get('create', Create::class)->name('create');
 Route::post('/store', [Create::class, 'store'])->name('store');
 Route::get('/units/{id}', [Create::class, 'show'])->name('video');
 Route::get('/units/{id}', Posts::class)->name('video');
+
+// Storage link
+Route::get('/foo', function () {
+    Artisan::call('storage:link');
+});

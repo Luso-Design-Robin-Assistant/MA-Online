@@ -1,8 +1,8 @@
 <div class="ls-nav flex flex-row justify-between w-screen absolute px-20 py-10">
     <a href="/">
-        <img class="ls-logo w-20" src="{{ url('/images/logo.png') }}" alt="logo-placeholder">
+        <img class="ls-logo w-20" src="{{ url('/images/Logo.png') }}" alt="logo-placeholder">
     </a>
-    <button class="bg-transparent flex items-center text-white uppercase text-l md:text-2xl text-center hover:text-white transition-colors bg-green rounded-full py-2 md:py-2 px-6 md:px:12 font-semibold p-4 h-full" onclick="goBack()">Terug</button>
+    <button class="bg-transparent flex items-center text-white uppercase text-l md:text-2xl text-center hover:text-white transition-colors bg-green-100 rounded-full py-2 md:py-4 px-6 md:px-12 font-helvetica-bld p-4 h-full" onclick="goBack()">Terug</button>
 </div>
 <div class="flex flex-col md:flex-row h-screen">
     <div class="ls-hero w-full h-80 md:h-screen md:w-6/12">
